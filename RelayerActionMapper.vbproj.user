@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>X:\ProgrammingProjects\RelayerActionMapper\My Project\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="frmAddUpdateControls.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmControllerDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmControlWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmOpenFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmPreviewConfigFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,176 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <StartupObject>Sub Main</StartupObject>
+    <UseWindowsForms>true</UseWindowsForms>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>RelayerIcon.ico</ApplicationIcon>
+    <Platforms>AnyCPU;x86</Platforms>
+    <AssemblyName>Relayer Action Mapper</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="RelayerIcon.ico" />
+    <None Remove="ResourceObjects\KeyConfigDefault.json" />
+    <None Remove="ResourceObjects\KeyConfigDefaultController.json" />
+    <None Remove="ResourceObjects\KeyConfigDefaultKeyboard.json" />
+    <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_down.png" />
+    <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_left.png" />
+    <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_right.png" />
+    <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_up.png" />
+    <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_LB.png" />
+    <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_LT.png" />
+    <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_RB.png" />
+    <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_RT.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_A_button.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_back_button.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_B_button.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_L_StickClick.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_L_Sticks.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_L_Sticks_down.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_L_Sticks_left.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_L_Sticks_right.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_L_Sticks_up.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_menu_button.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_R_StickClick.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_R_Sticks.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_R_Sticks_down.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_R_Sticks_left.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_R_Sticks_right.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_R_Sticks_up.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_start_button.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_view_button.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_X_button.png" />
+    <None Remove="ResourceObjects\XboxButtons\Xbox_Y_button.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="ResourceObjects\KeyConfigDefault.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\KeyConfigDefaultController.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\KeyConfigDefaultKeyboard.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_down.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_up.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Icon_BtnXbox_LB.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Icon_BtnXbox_LT.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Icon_BtnXbox_RB.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Icon_BtnXbox_RT.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_A_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_back_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_B_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_L_StickClick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_L_Sticks.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_L_Sticks_down.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_L_Sticks_left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_L_Sticks_right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_L_Sticks_up.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_menu_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_R_StickClick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_R_Sticks.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_R_Sticks_down.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_R_Sticks_left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_R_Sticks_right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_R_Sticks_up.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_start_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_view_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_X_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_Y_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="My Project\Application.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Update="My Project\Settings.Designer.vb">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Update="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
