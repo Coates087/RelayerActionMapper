@@ -4,17 +4,24 @@ Public Class frmOpenFile
     Public gStrOpenFileName As String = String.Empty
     Public gControls As GameControls = Nothing
     Private myToolTip As New ToolTip()
+    Private validFile As Boolean
 
     Delegate Sub InvokeDelegate()
 
     Private Sub frmOpenFile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        lblUnSave.Text = ""
     End Sub
 
     Private Sub btnLoadFile_Click(sender As Object, e As EventArgs) Handles btnLoadFile.Click
         BeginInvoke(New InvokeDelegate(AddressOf DisableFileTextBox))
         LoadFile()
         BeginInvoke(New InvokeDelegate(AddressOf EnableFileTextBox))
+
+        If validFile Then
+            lblUnSave.Text = "File has not been loaded yet. Press <<OK>> to load the file."
+            '' setting focus on ok button
+            btnOk.Select()
+        End If
     End Sub
     Private Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
         Me.Close()
@@ -47,7 +54,10 @@ Public Class frmOpenFile
             txtFileName.Text = strFilename
 
             strFileData = My.Computer.FileSystem.ReadAllText(gStrOpenFileName)
+
+            validFile = True
         Else
+            validFile = False
             Exit Sub
         End If
 

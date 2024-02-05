@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 Imports System.Text.Json
 Imports System.Reflection
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 ''
 Public Class frmMain
     Delegate Sub InvokeDelegate()
@@ -21,6 +22,19 @@ Public Class frmMain
         assemblyName = "RelayerActionMapper" ''anAssemblyName.Name
         lblFile.Text = ""
         ClearSaveLabel()
+    End Sub
+
+    Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        ' Determine if text has changed in the textbox by comparing to original text.
+        If gUnsavedChanges Then
+            ' Display a MsgBox asking the user to save changes or abort.
+            Dim myMessage As String = "There are unsaved changes. Any unsaved changes to a file will be lossed. Are you sure you want to exit the program?"
+            Dim msgResult = MessageBox.Show(myMessage, "Relayer Action Mapper", MessageBoxButtons.YesNo)
+            If msgResult = DialogResult.No Then
+                ' Cancel the Closing event from closing the form.
+                e.Cancel = True
+            End If
+        End If
     End Sub
 
     Private Sub txtFileName_TextChanged(sender As Object, e As EventArgs)
@@ -105,10 +119,15 @@ Public Class frmMain
         myOptions.Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
         myOptions.WriteIndented = True
 
-        Dim strJson As String = JsonSerializer.Serialize(gControls, myOptions)
-        Dim myControls As GameControlsPlus = JsonSerializer.Deserialize(Of GameControlsPlus)(strJson)
+        Dim myControls As GameControlsPlus = Nothing
+        '' build for .Net Desktop Runtime
 
-        myControls = myControls.GetDescriptonsForControlsJSON() ''AddDescriptonsForControls(myControls)
+        If Not IsNothing(gControls) Then
+            Dim strJson As String = JsonSerializer.Serialize(gControls, myOptions)
+            myControls = JsonSerializer.Deserialize(Of GameControlsPlus)(strJson)
+
+            myControls = myControls.GetDescriptonsForControlsJSON() ''AddDescriptonsForControls(myControls)
+        End If
 
         previewControls.gControls = myControls
         Dim controlDialog As DialogResult = previewControls.ShowDialog()
@@ -283,4 +302,5 @@ Public Class frmMain
             End If
         End If
     End Sub
+
 End Class

@@ -101,6 +101,19 @@ Public Class frmAddUpdateControls
             HideXboxControls()
         End If
     End Sub
+
+
+    Private Sub cboMouseOverScroll(sender As Object, e As EventArgs)
+        '' See here for solution for accidental mousewheel scrolling when the drop down isn't open:
+        '' https://stackoverflow.com/a/66100313
+
+        Dim myCbo As ComboBox = DirectCast(sender, ComboBox)
+
+        If myCbo.DroppedDown = False Then
+            DirectCast(e, HandledMouseEventArgs).Handled = True
+        End If
+    End Sub
+
 #Region "Keyboard Mapping"
 
     Private Sub btnKeyStart_Click(sender As Object, e As EventArgs) Handles btnKeyStart.Click
@@ -452,7 +465,8 @@ Public Class frmAddUpdateControls
             xboxCBox.DisplayMember = "XboxButtonName"
             xboxCBox.ValueMember = "XboxButtonValue"
             xboxCBox.DataSource = New List(Of XboxButton)(xboxButtonList)
-
+            ''cboMouseOverScroll
+            AddHandler xboxCBox.MouseWheel, AddressOf cboMouseOverScroll
         Next
         MapValues()
     End Sub

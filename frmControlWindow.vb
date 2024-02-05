@@ -52,6 +52,9 @@
         controlResult.DataSource = New List(Of KeyboardClass)(keyList)
 
         controlResult.Parent = gBoxKeys
+
+
+        AddHandler controlResult.MouseWheel, AddressOf cboMouseOverScroll
     End Sub
 
     Private Sub btnDynamicRemove(sender As Object, e As EventArgs)
@@ -69,6 +72,17 @@
             OrganizeControls()
         End If
 
+    End Sub
+
+    Private Sub cboMouseOverScroll(sender As Object, e As EventArgs)
+        '' See here for solution for accidental mousewheel scrolling when the drop down isn't open:
+        '' https://stackoverflow.com/a/66100313
+
+        Dim myCbo As ComboBox = DirectCast(sender, ComboBox)
+
+        If myCbo.DroppedDown = False Then
+            DirectCast(e, HandledMouseEventArgs).Handled = True
+        End If
     End Sub
 
     Private Sub OrganizeControls()
@@ -100,6 +114,8 @@
         cboDefaultKey.ValueMember = "KeyCode"
         cboDefaultKey.DataSource = New List(Of KeyboardClass)(keyList)
 
+        AddHandler cboDefaultKey.MouseWheel, AddressOf cboMouseOverScroll
+
         Dim obj = IIf(IsNothing(gButton), gKeyList, gButton)
 
         Dim strKeys As List(Of String) = obj.KeyCode
@@ -126,6 +142,8 @@
                 controlResult.Parent = gBoxKeys
 
                 controlResult.SelectedValue = strKeys(i)
+
+                AddHandler controlResult.MouseWheel, AddressOf cboMouseOverScroll
 
                 tabStop += 2
                 tabStop2 += 2
@@ -301,15 +319,20 @@
         result.Add(New KeyboardClass With {.KeyCode = "ScrollLock", .KeyName = "ScrollLock"})
         result.Add(New KeyboardClass With {.KeyCode = "LeftShift", .KeyName = "LeftShift"})
         result.Add(New KeyboardClass With {.KeyCode = "RightShift", .KeyName = "RightShift"})
+        result.Add(New KeyboardClass With {.KeyCode = "Shift", .KeyName = "Shift"})
         result.Add(New KeyboardClass With {.KeyCode = "LeftControl", .KeyName = "LeftControl"})
         result.Add(New KeyboardClass With {.KeyCode = "RightControl", .KeyName = "RightControl"})
+        result.Add(New KeyboardClass With {.KeyCode = "Control", .KeyName = "Control"})
         result.Add(New KeyboardClass With {.KeyCode = "LeftAlt", .KeyName = "LeftAlt"})
         result.Add(New KeyboardClass With {.KeyCode = "RightAlt", .KeyName = "RightAlt"})
+        result.Add(New KeyboardClass With {.KeyCode = "Alt", .KeyName = "Alt"})
 
         result.Add(New KeyboardClass With {.KeyCode = "LeftCommand", .KeyName = "LeftCommand"})
         result.Add(New KeyboardClass With {.KeyCode = "RightCommand", .KeyName = "RightCommand"})
+        result.Add(New KeyboardClass With {.KeyCode = "Command", .KeyName = "Command"})
         result.Add(New KeyboardClass With {.KeyCode = "LeftApple", .KeyName = "LeftApple"})
         result.Add(New KeyboardClass With {.KeyCode = "RightApple", .KeyName = "RightApple"})
+        result.Add(New KeyboardClass With {.KeyCode = "Apple", .KeyName = "Apple"})
         result.Add(New KeyboardClass With {.KeyCode = "Help", .KeyName = "Help"})
         result.Add(New KeyboardClass With {.KeyCode = "Print", .KeyName = "Print"})
 
