@@ -66,6 +66,8 @@
 
             Dim myButton = gBoxKeys.Controls.Cast(Of Control)().Where(Function(t) {conRemoveTag + tagNo}.Contains(t.Tag?.ToString)).FirstOrDefault
 
+            '' Figure out how to stop the controls from shifting to far up
+
             gBoxKeys.Controls.Remove(myDropDown)
             gBoxKeys.Controls.Remove(myButton)
 
@@ -97,7 +99,7 @@
 
         Dim startingPoint As Integer = cboDefaultKey.Location.Y
         ''+= cboDefaultKey.Size.Height + 5
-        Dim newY As Integer = cboDefaultKey.Size.Height + 5
+        Dim newY As Integer = cboDefaultKey.Size.Height + 5 + 5
 
         For i As Integer = 0 To myDropDowns.Count - 1 Step 1
             newY += cboDefaultKey.Size.Height + 5

@@ -294,6 +294,7 @@ Public Class frmMain
         Dim writeFileResult = WriteToFile(json, strSaveFilePath)
         Dim dirPath As String = ""
         If writeFileResult = True Then
+            gUnsavedChanges = False
             Dim msgResult = MessageBox.Show("Do you wish to open the directory for this file?", "Save Successful", MessageBoxButtons.YesNo)
 
             If msgResult = DialogResult.Yes Then
