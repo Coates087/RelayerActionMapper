@@ -33,6 +33,7 @@ Partial Class frmMain
         btnPreviewConfig = New Button()
         lblUnSave = New Label()
         btnSave = New Button()
+        btnTest = New Button()
         SuspendLayout()
         ' 
         ' btnLoadFile
@@ -139,12 +140,24 @@ Partial Class frmMain
         btnSave.Text = "Save File"
         btnSave.UseVisualStyleBackColor = True
         ' 
+        ' btnTest
+        ' 
+        btnTest.Location = New Point(191, 299)
+        btnTest.Margin = New Padding(4, 3, 4, 3)
+        btnTest.Name = "btnTest"
+        btnTest.Size = New Size(133, 33)
+        btnTest.TabIndex = 12
+        btnTest.Text = "Save File2"
+        btnTest.UseVisualStyleBackColor = True
+        btnTest.Visible = False
+        ' 
         ' frmMain
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         AutoSize = True
         ClientSize = New Size(631, 434)
+        Controls.Add(btnTest)
         Controls.Add(btnSave)
         Controls.Add(lblUnSave)
         Controls.Add(btnPreviewConfig)
@@ -158,7 +171,7 @@ Partial Class frmMain
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(4, 3, 4, 3)
         Name = "frmMain"
-        Text = "Relayer Button Mapper"
+        Text = "Relayer Action Mapper"
         ResumeLayout(False)
 
     End Sub
@@ -173,4 +186,5 @@ Partial Class frmMain
     Friend WithEvents btnPreviewConfig As Button
     Friend WithEvents lblUnSave As Label
     Friend WithEvents btnSave As Button
+    Friend WithEvents btnTest As Button
 End Class

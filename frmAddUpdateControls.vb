@@ -499,8 +499,8 @@ Public Class frmAddUpdateControls
 
             cboRsUp.SelectedValue = gControls.UpArrow.ButtonName
             cboRsDown.SelectedValue = gControls.DownArrow.ButtonName
-            cboRsLeft.SelectedValue = gControls.DownArrow.ButtonName
-            cboRsRight.SelectedValue = gControls.DownArrow.ButtonName
+            cboRsLeft.SelectedValue = gControls.LeftArrow.ButtonName
+            cboRsRight.SelectedValue = gControls.RightArrow.ButtonName
             cboRsButton.SelectedValue = gControls.R.ButtonName
 
             lblStart.Text = String.Join(", ", gControls.Escape.KeyCode)
