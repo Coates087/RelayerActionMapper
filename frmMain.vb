@@ -204,10 +204,10 @@ Public Class frmMain
 
         Dim strFileData As String = String.Empty
         ' Show open file dialog box
-        Dim result As Boolean = sFile.ShowDialog()
+        Dim result = sFile.ShowDialog()
 
         ' Process open file dialog box results
-        If result = True Then
+        If result = DialogResult.OK Then
             ' Open document
             strSaveFilePath = sFile.FileName
         Else
