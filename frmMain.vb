@@ -192,9 +192,10 @@ Public Class frmMain
     End Sub
 
     Private Sub ClearSaveLabel()
-
+        gUnsavedChanges = False
         lblUnSave.Text = ""
     End Sub
+
     Public Sub CreateDefaultJsonFile(intDefaultType As Integer)
         Dim sFile As New SaveFileDialog
         sFile.DefaultExt = ".json"

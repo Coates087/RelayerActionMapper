@@ -12,7 +12,7 @@
     "Shift":
     {
         "ButtonName": "joystick_button_3",
-        "KeyCode": [ "Shift" ]
+        "KeyCode": [ "LeftShift","RightShift" ]
     },
     "Tab":
     {
@@ -101,7 +101,7 @@
     },
     "Ctrl":
     {
-        "KeyCode": [ "Control" ]
+      "KeyCode": [ "LeftControl", "RightControl" ]
     },
     "Ctrl+W":
     {
