@@ -34,6 +34,7 @@ Partial Class frmMain
         lblUnSave = New Label()
         btnSave = New Button()
         btnTest = New Button()
+        chkOverride = New CheckBox()
         SuspendLayout()
         ' 
         ' btnLoadFile
@@ -151,12 +152,23 @@ Partial Class frmMain
         btnTest.UseVisualStyleBackColor = True
         btnTest.Visible = False
         ' 
+        ' chkOverride
+        ' 
+        chkOverride.AutoSize = True
+        chkOverride.Location = New Point(481, 12)
+        chkOverride.Name = "chkOverride"
+        chkOverride.Size = New Size(132, 19)
+        chkOverride.TabIndex = 13
+        chkOverride.Text = "Always Override File"
+        chkOverride.UseVisualStyleBackColor = True
+        ' 
         ' frmMain
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         AutoSize = True
         ClientSize = New Size(631, 434)
+        Controls.Add(chkOverride)
         Controls.Add(btnTest)
         Controls.Add(btnSave)
         Controls.Add(lblUnSave)
@@ -173,6 +185,7 @@ Partial Class frmMain
         Name = "frmMain"
         Text = "Relayer Action Mapper"
         ResumeLayout(False)
+        PerformLayout()
 
     End Sub
 
@@ -187,4 +200,5 @@ Partial Class frmMain
     Friend WithEvents lblUnSave As Label
     Friend WithEvents btnSave As Button
     Friend WithEvents btnTest As Button
+    Friend WithEvents chkOverride As CheckBox
 End Class

@@ -3,6 +3,8 @@ Imports System.Text.Json
 Public Class frmPreviewConfigFile
 
     Public gControls As GameControlsPlus = Nothing
+    Private jsonControls As String = String.Empty
+    Private jsonControlsPlus As String = String.Empty
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Close()
@@ -34,8 +36,29 @@ Public Class frmPreviewConfigFile
         myOptions.Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
         myOptions.WriteIndented = True
 
-        Dim json As String = JsonSerializer.Serialize(gControls, myOptions)
+        jsonControlsPlus = JsonSerializer.Serialize(gControls, myOptions)
 
-        rTxtJson.Text = json
+        jsonControls = JsonSerializer.Serialize(JsonSerializer.Deserialize(Of GameControls)(jsonControlsPlus), myOptions)
+
+        If chkShowDesc.Checked Then
+
+            rTxtJson.Text = jsonControlsPlus
+        Else
+            rTxtJson.Text = jsonControls
+        End If
+        'rTxtJson.Text = jsonControls
+    End Sub
+
+    Private Sub rTxtJson_TextChanged(sender As Object, e As EventArgs) Handles rTxtJson.TextChanged
+
+    End Sub
+
+    Private Sub chkShowDesc_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowDesc.CheckedChanged
+        If chkShowDesc.Checked Then
+
+            rTxtJson.Text = jsonControlsPlus
+        Else
+            rTxtJson.Text = jsonControls
+        End If
     End Sub
 End Class

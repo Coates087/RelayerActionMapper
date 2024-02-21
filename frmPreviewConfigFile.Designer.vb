@@ -22,65 +22,82 @@ Partial Class frmPreviewConfigFile
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.panPreview = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.rTxtJson = New System.Windows.Forms.RichTextBox()
-        Me.btnClose = New System.Windows.Forms.Button()
-        Me.panPreview.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'panPreview
-        '
-        Me.panPreview.Controls.Add(Me.Label1)
-        Me.panPreview.Controls.Add(Me.rTxtJson)
-        Me.panPreview.Location = New System.Drawing.Point(12, 12)
-        Me.panPreview.Name = "panPreview"
-        Me.panPreview.Size = New System.Drawing.Size(734, 395)
-        Me.panPreview.TabIndex = 0
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 8)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(472, 24)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Use Ctrl + Mouse Wheel Up/Down to Zoom In/Out"
-        '
-        'rTxtJson
-        '
-        Me.rTxtJson.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rTxtJson.Location = New System.Drawing.Point(4, 35)
-        Me.rTxtJson.Name = "rTxtJson"
-        Me.rTxtJson.Size = New System.Drawing.Size(727, 357)
-        Me.rTxtJson.TabIndex = 0
-        Me.rTxtJson.Text = ""
-        '
-        'btnClose
-        '
-        Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnClose.Location = New System.Drawing.Point(588, 413)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(128, 29)
-        Me.btnClose.TabIndex = 7
-        Me.btnClose.Text = "Close"
-        Me.btnClose.UseVisualStyleBackColor = True
-        '
-        'frmPreviewConfigFile
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.ControlBox = False
-        Me.Controls.Add(Me.btnClose)
-        Me.Controls.Add(Me.panPreview)
-        Me.Name = "frmPreviewConfigFile"
-        Me.Text = "Preview Config File"
-        Me.panPreview.ResumeLayout(False)
-        Me.panPreview.PerformLayout()
-        Me.ResumeLayout(False)
+        panPreview = New Panel()
+        Label1 = New Label()
+        rTxtJson = New RichTextBox()
+        btnClose = New Button()
+        chkShowDesc = New CheckBox()
+        panPreview.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' panPreview
+        ' 
+        panPreview.Controls.Add(chkShowDesc)
+        panPreview.Controls.Add(Label1)
+        panPreview.Controls.Add(rTxtJson)
+        panPreview.Location = New Point(14, 12)
+        panPreview.Margin = New Padding(4, 3, 4, 3)
+        panPreview.Name = "panPreview"
+        panPreview.Size = New Size(856, 400)
+        panPreview.TabIndex = 0
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(4, 18)
+        Label1.Margin = New Padding(4, 0, 4, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(472, 24)
+        Label1.TabIndex = 6
+        Label1.Text = "Use Ctrl + Mouse Wheel Up/Down to Zoom In/Out"
+        ' 
+        ' rTxtJson
+        ' 
+        rTxtJson.Font = New Font("Consolas", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        rTxtJson.Location = New Point(5, 49)
+        rTxtJson.Margin = New Padding(4, 3, 4, 3)
+        rTxtJson.Name = "rTxtJson"
+        rTxtJson.Size = New Size(848, 341)
+        rTxtJson.TabIndex = 0
+        rTxtJson.Text = ""
+        ' 
+        ' btnClose
+        ' 
+        btnClose.DialogResult = DialogResult.Cancel
+        btnClose.Location = New Point(686, 430)
+        btnClose.Margin = New Padding(4, 3, 4, 3)
+        btnClose.Name = "btnClose"
+        btnClose.Size = New Size(149, 33)
+        btnClose.TabIndex = 7
+        btnClose.Text = "Close"
+        btnClose.UseVisualStyleBackColor = True
+        ' 
+        ' chkShowDesc
+        ' 
+        chkShowDesc.AutoSize = True
+        chkShowDesc.Location = New Point(649, 3)
+        chkShowDesc.Name = "chkShowDesc"
+        chkShowDesc.Size = New Size(204, 19)
+        chkShowDesc.TabIndex = 14
+        chkShowDesc.Text = "Show Description For Each Action"
+        chkShowDesc.UseVisualStyleBackColor = True
+        ' 
+        ' frmPreviewConfigFile
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        AutoSize = True
+        ClientSize = New Size(933, 483)
+        ControlBox = False
+        Controls.Add(btnClose)
+        Controls.Add(panPreview)
+        Margin = New Padding(4, 3, 4, 3)
+        Name = "frmPreviewConfigFile"
+        Text = "Preview Config File"
+        panPreview.ResumeLayout(False)
+        panPreview.PerformLayout()
+        ResumeLayout(False)
 
     End Sub
 
@@ -88,4 +105,5 @@ Partial Class frmPreviewConfigFile
     Friend WithEvents btnClose As Button
     Friend WithEvents rTxtJson As RichTextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents chkShowDesc As CheckBox
 End Class

@@ -145,7 +145,6 @@ Public Class frmMain
             MessageBox.Show("Controls have not been set", "Save Unsuccessful", MessageBoxButtons.OK)
         Else
             SaveFile()
-            ClearSaveLabel()
         End If
     End Sub
 
@@ -204,6 +203,10 @@ Public Class frmMain
         Dim strSaveFilePath As String = ""
 
         Dim strFileData As String = String.Empty
+        If chkOverride.Checked Then
+            sFile.OverwritePrompt = False
+        End If
+
         ' Show open file dialog box
         Dim result = sFile.ShowDialog()
 
@@ -277,13 +280,20 @@ Public Class frmMain
         Dim strSaveFilePath As String = ""
 
         Dim strFileData As String = String.Empty
+
+        If chkOverride.Checked Then
+            sFile.OverwritePrompt = False
+        End If
+
         ' Show open file dialog box
-        Dim result As Boolean = sFile.ShowDialog()
+        Dim result = sFile.ShowDialog()
 
         ' Process open file dialog box results
-        If result = True Then
+        If result = DialogResult.OK Then
             ' Open document
             strSaveFilePath = sFile.FileName
+
+            ClearSaveLabel()
         Else
             Exit Sub
         End If
