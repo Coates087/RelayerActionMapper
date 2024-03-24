@@ -14,4 +14,4 @@ This tool aims to solve both of those problems.
 
 ## Credits
 Special thanks to **Meekurukuru** from Nexus Mods. Check out some of his mods below:
-https://www.nexusmods.com/neptuniasistersvssisters/users/189494967?tab=user+files&BH=0
+[https://www.nexusmods.com/users/189494967?tab=user+files&BH=0](https://www.nexusmods.com/users/189494967?tab=user+files&BH=0)
