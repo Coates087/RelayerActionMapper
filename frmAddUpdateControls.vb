@@ -675,7 +675,7 @@ Public Class frmAddUpdateControls
                 Dim aKeyList As New List(Of String)
                 If aKey = "Ctrl" Then
                     root.Item(aKey).Item("KeyCode").AsArray().Clear()
-                    root.Item(aKey).Item("KeyCode").AsArray().Add("Control")
+                    root.Item(aKey).Item("KeyCode").AsArray().Add("LeftControl")
                 Else
                     root.Item(aKey).Item("KeyCode").AsArray().Clear()
                     Dim result = GetRightKey(root.Item(aKey).Item("ButtonName"))
@@ -696,7 +696,7 @@ Public Class frmAddUpdateControls
             Case "joystick_button_1"
                 keyName = "Backspace"
             Case "joystick_button_3"
-                keyName = "Shift"
+                keyName = "LeftShift"
             Case "joystick_button_2"
                 keyName = "Tab"
             Case "Axis_7_P"
@@ -730,9 +730,9 @@ Public Class frmAddUpdateControls
                 keyName = "RightArrow"
 
             Case "Axis_9_P"
-                keyName = ""
+                keyName = "None"
             Case "Axis_10_P"
-                keyName = ""
+                keyName = "None"
         End Select
 
         Return keyName
