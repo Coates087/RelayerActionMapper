@@ -328,6 +328,31 @@ Public Class frmAddUpdateControls
 
 
     Public Sub LoadForm()
+
+        Dim secondaryList = New List(Of String) From {
+            "Circle.png",
+            "Cross.png",
+            "PS_L1.png",
+            "PS_L2.png",
+            "PS_L3.png",
+            "PS_Options.png",
+            "PS_R1.png",
+            "PS_R2.png",
+            "PS_R3.png",
+            "PS_Share.png",
+            "Square.png",
+            "Triangle.png",
+            "Icon_BtnXbox_dpad_down.png",
+            "Icon_BtnXbox_dpad_left.png",
+            "Icon_BtnXbox_dpad_right.png",
+            "Icon_BtnXbox_dpad_up.png",
+            "Xbox_L_Sticks.png",
+            "Xbox_L_Sticks_down.png",
+            "Xbox_L_Sticks_left.png",
+            "Xbox_L_Sticks_right.png",
+            "Xbox_L_Sticks_up.png"
+        }
+
         fileResourceList = New List(Of String) From {
         "Icon_BtnXbox_dpad_down.png",
         "Icon_BtnXbox_dpad_left.png",
@@ -369,34 +394,34 @@ Public Class frmAddUpdateControls
 
         For Each imageStream As ImageName In imageStreamList
             If Not IsNothing(imageStream.ImageData) Then
-                If imageStream.FileName = "Xbox_start_button.png" Then
+                If {"Xbox_start_button.png", "PS_Options.png"}.Contains(imageStream.FileName) Then
                     picBoxStart.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxStart, imageStream.ToolTipText)
-                ElseIf imageStream.FileName = "Xbox_back_button.png" Then
+                ElseIf {"Xbox_back_button.png", "PS_Share.png"}.Contains(imageStream.FileName) Then
                     picBoxBack.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxBack, imageStream.ToolTipText)
-                ElseIf imageStream.FileName = "Xbox_A_button.png" Then
+                ElseIf {"Xbox_A_button.png", "Cross.png"}.Contains(imageStream.FileName) Then
                     picBoxA.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxA, imageStream.ToolTipText)
-                ElseIf imageStream.FileName = "Xbox_B_button.png" Then
+                ElseIf {"Xbox_B_button.png", "Circle.png"}.Contains(imageStream.FileName) Then
                     picBoxB.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxB, imageStream.ToolTipText)
-                ElseIf imageStream.FileName = "Xbox_X_button.png" Then
+                ElseIf {"Xbox_X_button.png", "Square.png"}.Contains(imageStream.FileName) Then
                     picBoxX.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxX, imageStream.ToolTipText)
-                ElseIf imageStream.FileName = "Xbox_Y_button.png" Then
+                ElseIf {"Xbox_Y_button.png", "Triangle.png"}.Contains(imageStream.FileName) Then
                     picBoxY.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxY, imageStream.ToolTipText)
-                ElseIf imageStream.FileName = "Icon_BtnXbox_LB.png" Then
+                ElseIf {"Icon_BtnXbox_LB.png", "PS_L1.png"}.Contains(imageStream.FileName) Then
                     picBoxLB.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxLB, imageStream.ToolTipText)
-                ElseIf imageStream.FileName = "Icon_BtnXbox_RB.png" Then
+                ElseIf {"Icon_BtnXbox_RB.png", "PS_R1.png"}.Contains(imageStream.FileName) Then
                     picBoxRB.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxRB, imageStream.ToolTipText)
-                ElseIf imageStream.FileName = "Icon_BtnXbox_LT.png" Then
+                ElseIf {"Icon_BtnXbox_LT.png", "PS_L2.png"}.Contains(imageStream.FileName) Then
                     picBoxLT.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxLT, imageStream.ToolTipText)
-                ElseIf imageStream.FileName = "Icon_BtnXbox_RT.png" Then
+                ElseIf {"Icon_BtnXbox_RT.png", "PS_R2.png"}.Contains(imageStream.FileName) Then
                     picBoxRT.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxRT, imageStream.ToolTipText)
                     ''dpad
@@ -429,7 +454,7 @@ Public Class frmAddUpdateControls
                 ElseIf imageStream.FileName = "Xbox_L_Sticks_right.png" Then
                     picBoxLsRight.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxLsRight, imageStream.ToolTipText)
-                ElseIf imageStream.FileName = "Xbox_L_StickClick.png" Then
+                ElseIf {"Xbox_L_StickClick.png", "PS_L3.png"}.Contains(imageStream.FileName) Then
                     picBoxLsButton.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxLsButton, imageStream.ToolTipText)
 
@@ -446,7 +471,7 @@ Public Class frmAddUpdateControls
                 ElseIf imageStream.FileName = "Xbox_R_Sticks_right.png" Then
                     picBoxRsRight.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxRsRight, imageStream.ToolTipText)
-                ElseIf imageStream.FileName = "Xbox_R_StickClick.png" Then
+                ElseIf {"Xbox_R_StickClick.png", "PS_R3.png"}.Contains(imageStream.FileName) Then
                     picBoxRsButton.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxRsButton, imageStream.ToolTipText)
                 End If
