@@ -16,6 +16,19 @@
     <None Remove="ResourceObjects\KeyConfigDefault.json" />
     <None Remove="ResourceObjects\KeyConfigDefaultController.json" />
     <None Remove="ResourceObjects\KeyConfigDefaultKeyboard.json" />
+    <None Remove="ResourceObjects\KeyConfig_PS.json" />
+    <None Remove="ResourceObjects\PS_Buttons\Circle.png" />
+    <None Remove="ResourceObjects\PS_Buttons\Cross.png" />
+    <None Remove="ResourceObjects\PS_Buttons\PS_L1.png" />
+    <None Remove="ResourceObjects\PS_Buttons\PS_L2.png" />
+    <None Remove="ResourceObjects\PS_Buttons\PS_L3.png" />
+    <None Remove="ResourceObjects\PS_Buttons\PS_Options.png" />
+    <None Remove="ResourceObjects\PS_Buttons\PS_R1.png" />
+    <None Remove="ResourceObjects\PS_Buttons\PS_R2.png" />
+    <None Remove="ResourceObjects\PS_Buttons\PS_R3.png" />
+    <None Remove="ResourceObjects\PS_Buttons\PS_Share.png" />
+    <None Remove="ResourceObjects\PS_Buttons\Square.png" />
+    <None Remove="ResourceObjects\PS_Buttons\Triangle.png" />
     <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_down.png" />
     <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_left.png" />
     <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_right.png" />
@@ -54,6 +67,45 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="ResourceObjects\KeyConfigDefaultKeyboard.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\KeyConfig_PS.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\PS_Buttons\Circle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\PS_Buttons\Cross.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_L1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_L2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_L3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_Options.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_R1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_R2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_R3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_Share.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\PS_Buttons\Square.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\PS_Buttons\Triangle.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_down.png">

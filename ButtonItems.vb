@@ -49,4 +49,50 @@
 
         Return result
     End Function
+
+
+
+    Public Shared Function GetPS_Buttons() As List(Of XboxButton)
+        Dim result As New List(Of XboxButton)
+
+        '' Face buttons
+        result.Add(New XboxButton With {.XboxButtonName = "PS Cross", .XboxButtonValue = "joystick_button_1"})
+        result.Add(New XboxButton With {.XboxButtonName = "PS Circle", .XboxButtonValue = "joystick_button_2"})
+        result.Add(New XboxButton With {.XboxButtonName = "PS Triangle", .XboxButtonValue = "joystick_button_3"})
+        result.Add(New XboxButton With {.XboxButtonName = "PS Square", .XboxButtonValue = "joystick_button_0"})
+
+        '' Shoulder buttons
+        result.Add(New XboxButton With {.XboxButtonName = "PS L1", .XboxButtonValue = "joystick_button_4"})
+        result.Add(New XboxButton With {.XboxButtonName = "PS R1", .XboxButtonValue = "joystick_button_5"})
+        result.Add(New XboxButton With {.XboxButtonName = "PS L2", .XboxButtonValue = "joystick_button_6"})
+        result.Add(New XboxButton With {.XboxButtonName = "PS R2", .XboxButtonValue = "joystick_button_7"})
+
+        '' Analog buttons
+        result.Add(New XboxButton With {.XboxButtonName = "PS L3 (Left Stick Btn)", .XboxButtonValue = "joystick_button_10"})
+        result.Add(New XboxButton With {.XboxButtonName = "PS R3 (Right Stick Btn)", .XboxButtonValue = "joystick_button_11"})
+
+        '' Left Stick
+        result.Add(New XboxButton With {.XboxButtonName = "PS LStick Up", .XboxButtonValue = "Axis_2_N"})
+        result.Add(New XboxButton With {.XboxButtonName = "PS LStick Down", .XboxButtonValue = "Axis_2_P"})
+        result.Add(New XboxButton With {.XboxButtonName = "PS LStick Left", .XboxButtonValue = "Axis_1_N"})
+        result.Add(New XboxButton With {.XboxButtonName = "PS LStick Right", .XboxButtonValue = "Axis_1_P"})
+
+        '' Right Stick
+        result.Add(New XboxButton With {.XboxButtonName = "PS RStick Up", .XboxButtonValue = "Axis_6_N"})
+        result.Add(New XboxButton With {.XboxButtonName = "PS RStick Down", .XboxButtonValue = "Axis_6_P"})
+        result.Add(New XboxButton With {.XboxButtonName = "PS RStick Left", .XboxButtonValue = "Axis_3_N"})
+        result.Add(New XboxButton With {.XboxButtonName = "PS RStick Right", .XboxButtonValue = "Axis_3_P"})
+
+        '' D pad
+        result.Add(New XboxButton With {.XboxButtonName = "PS D Pad Up", .XboxButtonValue = "Axis_8_P"})
+        result.Add(New XboxButton With {.XboxButtonName = "PS D Pad Down", .XboxButtonValue = "Axis_8_N"})
+        result.Add(New XboxButton With {.XboxButtonName = "PS D Pad Left", .XboxButtonValue = "Axis_7_N"})
+        result.Add(New XboxButton With {.XboxButtonName = "PS D Pad Right", .XboxButtonValue = "Axis_7_P"})
+
+        ' Start and Back
+        result.Add(New XboxButton With {.XboxButtonName = "PS Select/Share", .XboxButtonValue = "joystick_button_8"})
+        result.Add(New XboxButton With {.XboxButtonName = "PS Start/Options", .XboxButtonValue = "joystick_button_9"})
+
+        Return result
+    End Function
 End Class

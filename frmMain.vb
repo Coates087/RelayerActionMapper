@@ -15,7 +15,10 @@ Public Class frmMain
 
     Const resKeyConfigDefault As String = "KeyConfigDefault.json"
     Const resKeyGamePadConfigDefault As String = "KeyConfigDefaultController.json"
+    Const resKeyGamePadConfigDefault_PS As String = "KeyConfig_PS.json"
     Const resKeyboardConfigDefault As String = "KeyConfigDefaultKeyboard.json"
+
+    Public gPlatform As Platform = Platform.Xbox_btns
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim thisAssembly As Assembly = Assembly.GetExecutingAssembly()
@@ -24,6 +27,20 @@ Public Class frmMain
         assemblyName = "RelayerActionMapper" ''anAssemblyName.Name
         lblFile.Text = ""
         ClearSaveLabel()
+    End Sub
+
+
+    Private Sub rbnXbox_CheckedChanged(sender As Object, e As EventArgs) Handles rbnXbox.CheckedChanged
+
+        If rbnXbox.Checked Then
+            gPlatform = Platform.Xbox_btns
+        End If
+    End Sub
+
+    Private Sub rbnPS_CheckedChanged(sender As Object, e As EventArgs) Handles rbnPS.CheckedChanged
+        If rbnPS.Checked Then
+            gPlatform = Platform.PS_btns
+        End If
     End Sub
 
     Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -57,6 +74,9 @@ Public Class frmMain
 
     Private Sub btnDefaultGamePadFile_Click(sender As Object, e As EventArgs) Handles btnDefaultGamePadFile.Click
         CreateDefaultJsonFile(1)
+    End Sub
+    Private Sub btnPSGamePadFile_Click(sender As Object, e As EventArgs) Handles btnPSGamePadFile.Click
+        CreateDefaultJsonFile(3)
     End Sub
 
     Private Sub btnDefaultKBMFile_Click(sender As Object, e As EventArgs) Handles btnDefaultKBMFile.Click
@@ -104,6 +124,7 @@ Public Class frmMain
         editControls.assemblyName = assemblyName
         editControls.gStrOpenFileName = gStrOpenFileName
         editControls.gControls = gControls
+        editControls.gPlatform = gPlatform
         Dim controlDialog As DialogResult = editControls.ShowDialog()
 
         If controlDialog = DialogResult.OK Then
@@ -220,6 +241,9 @@ Public Class frmMain
 
         Dim fullResourceName As String = ""
 
+        '' 1 = Xbox
+        '' 3 = PS
+
         Select Case intDefaultType
             Case 0
                 fullResourceName = assemblyName + "." + resKeyConfigDefault
@@ -227,6 +251,8 @@ Public Class frmMain
                 fullResourceName = assemblyName + "." + resKeyGamePadConfigDefault
             Case 2
                 fullResourceName = assemblyName + "." + resKeyboardConfigDefault
+            Case 3
+                fullResourceName = assemblyName + "." + resKeyGamePadConfigDefault_PS
             Case Else
                 fullResourceName = assemblyName + "." + resKeyConfigDefault
         End Select
@@ -236,6 +262,13 @@ Public Class frmMain
         Dim writeFileResult = WriteToFile(strResult, strSaveFilePath)
         Dim dirPath As String = ""
         If writeFileResult = True Then
+            If intDefaultType = 1 Then
+                'gPlatform = Platform.Xbox_btns
+                rbnXbox.Checked = True
+            ElseIf intDefaultType = 3 Then
+                'gPlatform = Platform.PS_btns
+                rbnPS.Checked = True
+            End If
             Dim msgResult = MessageBox.Show("Do you wish to open the directory for this file?", "Save Successful", MessageBoxButtons.YesNo)
 
             If msgResult = DialogResult.Yes Then
@@ -363,4 +396,5 @@ Public Class frmMain
 
         'IO.File.WriteAllBytes("C:\Users\LoCo\Desktop\Relayer Temp Folder\Test doc2.docx", byt)
     End Sub
+
 End Class

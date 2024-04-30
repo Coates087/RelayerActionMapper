@@ -21,6 +21,8 @@ Public Class frmAddUpdateControls
     Private Const conDlbQuote As String = Chr(34)
     Private Const gamepadOnlyWarningText As String = "You have selected "“Edit for Controller Only”". This mode is intended for the Controller Button Prompts mod on Nexus Mods and Game Banana. This mode will override all changes made for keyboard and mouse controls. Do you wish to use this mode?"
 
+    Public gPlatform As Platform = Platform.Xbox_btns
+
     Public Class ImageName
         Public FileName As String = String.Empty
         Public ImageData As Bitmap = Nothing
@@ -329,7 +331,7 @@ Public Class frmAddUpdateControls
 
     Public Sub LoadForm()
 
-        Dim secondaryList = New List(Of String) From {
+        Dim PS_List = New List(Of String) From {
             "Circle.png",
             "Cross.png",
             "PS_L1.png",
@@ -346,6 +348,10 @@ Public Class frmAddUpdateControls
             "Icon_BtnXbox_dpad_left.png",
             "Icon_BtnXbox_dpad_right.png",
             "Icon_BtnXbox_dpad_up.png",
+            "Xbox_R_Sticks_down.png",
+            "Xbox_R_Sticks_left.png",
+            "Xbox_R_Sticks_right.png",
+            "Xbox_R_Sticks_up.png",
             "Xbox_L_Sticks.png",
             "Xbox_L_Sticks_down.png",
             "Xbox_L_Sticks_left.png",
@@ -353,7 +359,8 @@ Public Class frmAddUpdateControls
             "Xbox_L_Sticks_up.png"
         }
 
-        fileResourceList = New List(Of String) From {
+
+        Dim Xbox_List = New List(Of String) From {
         "Icon_BtnXbox_dpad_down.png",
         "Icon_BtnXbox_dpad_left.png",
         "Icon_BtnXbox_dpad_right.png",
@@ -382,6 +389,14 @@ Public Class frmAddUpdateControls
         "Xbox_X_button.png",
         "Xbox_Y_button.png"
         }
+
+        If gPlatform = Platform.PS_btns Then
+            fileResourceList.AddRange(PS_List)
+        Else
+            fileResourceList.AddRange(Xbox_List)
+
+        End If
+
         imageStreamList = New List(Of ImageName)
 
         For Each strFile As String In fileResourceList
@@ -481,7 +496,12 @@ Public Class frmAddUpdateControls
         Dim xboxButtonList As New List(Of XboxButton)
 
         xboxButtonList.Add(New XboxButton With {.XboxButtonName = "", .XboxButtonValue = ""})
-        xboxButtonList.AddRange(GetXboxButtons())
+
+        If gPlatform = Platform.PS_btns Then
+            xboxButtonList.AddRange(GetPS_Buttons())
+        Else
+            xboxButtonList.AddRange(GetXboxButtons())
+        End If
 
         Dim myControls = gboxFields.Controls.Cast(Of Control)().Where(Function(e) e.GetType = GetType(ComboBox) And e.Tag?.ToString = "XboxCBox").ToList
         Dim xboxCboxes As New List(Of ComboBox)
@@ -599,27 +619,27 @@ Public Class frmAddUpdateControls
             Case "Icon_BtnXbox_dpad_up.png"
                 tipMessage = $"Move cursor up"
 
-            Case "Icon_BtnXbox_LB.png"
+            Case "Icon_BtnXbox_LB.png", "PS_L1.png"
                 tipMessage = $"Switch page/unit left"
-            Case "Icon_BtnXbox_LT.png"
+            Case "Icon_BtnXbox_LT.png", "PS_L2.png"
                 tipMessage = $"Zoom Out"
-            Case "Icon_BtnXbox_RB.png"
+            Case "Icon_BtnXbox_RB.png", "PS_R1.png"
                 tipMessage = $"Switch page/unit left{vbCrLf}VN Event/Cutscene: Fast Forword"
-            Case "Icon_BtnXbox_RT.png"
+            Case "Icon_BtnXbox_RT.png", "PS_R2.png"
                 tipMessage = $"Zoom In"
 
-            Case "Xbox_start_button.png", "Xbox_menu_button.png"
+            Case "Xbox_start_button.png", "Xbox_menu_button.png", "PS_Options.png"
                 tipMessage = $"Options Menu: revert to default settings{vbCrLf}Battle Screen: Battle menu{vbCrLf}VN Event/Cutscene: Skip event"
-            Case "Xbox_back_button.png", "Xbox_view_button.png"
+            Case "Xbox_back_button.png", "Xbox_view_button.png", "PS_Share.png"
                 tipMessage = $"Battle Screen: Display Stage information"
 
-            Case "Xbox_A_button.png"
+            Case "Xbox_A_button.png", "Cross.png"
                 tipMessage = $"Confirm"
-            Case "Xbox_B_button.png"
+            Case "Xbox_B_button.png", "Circle.png"
                 tipMessage = $"Cancel/Back"
-            Case "Xbox_X_button.png"
+            Case "Xbox_X_button.png", "Square.png"
                 tipMessage = $"Battle Screen:Display Detailed Info{vbCrLf}VN Event/Cutscene: Backlog{vbCrLf}Shop Screen: Overview{vbCrLf}Star Cube Screen: Overview"
-            Case "Xbox_Y_button.png"
+            Case "Xbox_Y_button.png", "Triangle.png"
                 tipMessage = $"Equipment Screen: Remove skill/equipment{vbCrLf}Battle Screen: Display threat area{vbCrLf}VN Event/Cutscene: Auto-Advance{vbCrLf}Shop Screen: Confirm Purchase"
 
             Case "Xbox_R_Sticks_down.png"
@@ -631,7 +651,7 @@ Public Class frmAddUpdateControls
             Case "Xbox_R_Sticks_up.png"
                 tipMessage = $"Battle Screen: Move camera up{vbCrLf}Star Cube Screen: freely move cursor up"
 
-            Case "Xbox_R_StickClick.png"
+            Case "Xbox_R_StickClick.png", "PS_R3.png"
                 tipMessage = $"Battle Screen: Toggle Auto Battle"
 
             Case "Xbox_L_Sticks_down.png"
@@ -643,7 +663,7 @@ Public Class frmAddUpdateControls
             Case "Xbox_L_Sticks_up.png"
                 tipMessage = $"Move cursor up"
 
-            Case "Xbox_L_StickClick.png"
+            Case "Xbox_L_StickClick.png", "PS_L3.png"
                 tipMessage = $"Battle Screen: View Aggro List"
         End Select
 
@@ -703,7 +723,14 @@ Public Class frmAddUpdateControls
                     root.Item(aKey).Item("KeyCode").AsArray().Add("LeftControl")
                 Else
                     root.Item(aKey).Item("KeyCode").AsArray().Clear()
-                    Dim result = GetRightKey(root.Item(aKey).Item("ButtonName"))
+                    Dim result As String = String.Empty
+
+                    If gPlatform = Platform.PS_btns Then
+                        result = GetRightKey_PS(root.Item(aKey).Item("ButtonName"))
+                    Else
+                        result = GetRightKey(root.Item(aKey).Item("ButtonName"))
+                    End If
+                    'result = GetRightKey(root.Item(aKey).Item("ButtonName"))
                     root.Item(aKey).Item("KeyCode").AsArray().Add(result)
                 End If
             Next
@@ -752,6 +779,57 @@ Public Class frmAddUpdateControls
             Case "Axis_4_N"
                 keyName = "LeftArrow"
             Case "Axis_4_P"
+                keyName = "RightArrow"
+
+            Case "Axis_9_P"
+                keyName = "None"
+            Case "Axis_10_P"
+                keyName = "None"
+        End Select
+
+        Return keyName
+    End Function
+
+    Private Function GetRightKey_PS(buttonName As String) As String
+        Dim keyName As String = String.Empty
+
+        Select Case buttonName
+            Case "joystick_button_1"
+                keyName = "Return"
+            Case "joystick_button_2"
+                keyName = "Backspace"
+            Case "joystick_button_3"
+                keyName = "LeftShift"
+            Case "joystick_button_0"
+                keyName = "Tab"
+            Case "Axis_8_P"
+                keyName = "W"
+            Case "Axis_8_N"
+                keyName = "S"
+            Case "Axis_7_N"
+                keyName = "A"
+            Case "Axis_7_P"
+                keyName = "D"
+            Case "joystick_button_4"
+                keyName = "Q"
+            Case "joystick_button_5"
+                keyName = "E"
+            Case "joystick_button_10"
+                keyName = "F"
+            Case "joystick_button_11"
+                keyName = "R"
+            Case "joystick_button_8"
+                keyName = "V"
+            Case "joystick_button_9"
+                keyName = "Escape"
+
+            Case "Axis_6_N"
+                keyName = "UpArrow"
+            Case "Axis_6_P"
+                keyName = "DownArrow"
+            Case "Axis_3_N"
+                keyName = "LeftArrow"
+            Case "Axis_3_P"
                 keyName = "RightArrow"
 
             Case "Axis_9_P"
