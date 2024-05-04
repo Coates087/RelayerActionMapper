@@ -24,9 +24,9 @@ Public Class frmMain
         Dim thisAssembly As Assembly = Assembly.GetExecutingAssembly()
         Dim anAssemblyName = thisAssembly.GetName()
 
-        ' '' Uncomment for testing
-        'TestPS.Visible = False
-        'TestXbox.Visible = False
+        ' ' Comment out for testing
+        TestPS.Visible = False
+        TestXbox.Visible = False
 
         assemblyName = "RelayerActionMapper" ''anAssemblyName.Name
         lblFile.Text = ""
