@@ -4,10 +4,14 @@ Imports System.Reflection
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports System.Text.Json.Nodes
 Imports Windows.Win32.UI
+Imports SlimDX
+Imports SlimDX.DirectInput
 ''
 Public Class frmMain
     Delegate Sub InvokeDelegate()
+    '' https://stackoverflow.com/a/5248304
 
+    ''Dim a As DirectInput
     Public assemblyName As String = String.Empty
     Public gStrOpenFileName As String = String.Empty
     Public gControls As GameControls = Nothing
@@ -272,7 +276,7 @@ Public Class frmMain
             Dim msgResult = MessageBox.Show("Do you wish to open the directory for this file?", "Save Successful", MessageBoxButtons.YesNo)
 
             If msgResult = DialogResult.Yes Then
-                dirPath = IO.Path.GetDirectoryName(strSaveFilePath)
+                dirPath = System.IO.Path.GetDirectoryName(strSaveFilePath)
                 Process.Start("explorer.exe", "/select,/separate," & Chr(34) & strSaveFilePath & Chr(34))
                 'Process.Start("explorer.exe", "/select" & Chr(34) & strSaveFilePath & Chr(34))
                 'Process.Start(dirPath)
@@ -344,7 +348,7 @@ Public Class frmMain
             Dim msgResult = MessageBox.Show("Do you wish to open the directory for this file?", "Save Successful", MessageBoxButtons.YesNo)
 
             If msgResult = DialogResult.Yes Then
-                dirPath = IO.Path.GetDirectoryName(strSaveFilePath)
+                dirPath = System.IO.Path.GetDirectoryName(strSaveFilePath)
                 Process.Start("explorer.exe", "/select,/separate," & Chr(34) & strSaveFilePath & Chr(34))
             End If
         End If
