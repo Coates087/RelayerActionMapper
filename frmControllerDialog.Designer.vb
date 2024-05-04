@@ -22,69 +22,76 @@ Partial Class frmControllerDialog
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Me.panPreview = New System.Windows.Forms.Panel()
-        Me.rTxtMessage = New System.Windows.Forms.RichTextBox()
-        Me.btnClose = New System.Windows.Forms.Button()
-        Me.btnYes = New System.Windows.Forms.Button()
-        Me.tip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.panPreview.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'panPreview
-        '
-        Me.panPreview.Controls.Add(Me.rTxtMessage)
-        Me.panPreview.Location = New System.Drawing.Point(12, 12)
-        Me.panPreview.Name = "panPreview"
-        Me.panPreview.Size = New System.Drawing.Size(734, 327)
-        Me.panPreview.TabIndex = 0
-        '
-        'rTxtMessage
-        '
-        Me.rTxtMessage.BackColor = System.Drawing.SystemColors.Control
-        Me.rTxtMessage.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.rTxtMessage.DetectUrls = False
-        Me.rTxtMessage.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rTxtMessage.Location = New System.Drawing.Point(4, 3)
-        Me.rTxtMessage.Name = "rTxtMessage"
-        Me.rTxtMessage.Size = New System.Drawing.Size(727, 310)
-        Me.rTxtMessage.TabIndex = 0
-        Me.rTxtMessage.Text = ""
-        '
-        'btnClose
-        '
-        Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.No
-        Me.btnClose.Location = New System.Drawing.Point(408, 366)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(128, 29)
-        Me.btnClose.TabIndex = 2
-        Me.btnClose.Text = "No"
-        Me.btnClose.UseVisualStyleBackColor = True
-        '
-        'btnYes
-        '
-        Me.btnYes.DialogResult = System.Windows.Forms.DialogResult.Yes
-        Me.btnYes.Location = New System.Drawing.Point(109, 366)
-        Me.btnYes.Name = "btnYes"
-        Me.btnYes.Size = New System.Drawing.Size(128, 29)
-        Me.btnYes.TabIndex = 1
-        Me.btnYes.Text = "Yes"
-        Me.btnYes.UseVisualStyleBackColor = True
-        '
-        'frmControllerDialog
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(803, 417)
-        Me.ControlBox = False
-        Me.Controls.Add(Me.btnYes)
-        Me.Controls.Add(Me.btnClose)
-        Me.Controls.Add(Me.panPreview)
-        Me.Name = "frmControllerDialog"
-        Me.Text = "Information"
-        Me.panPreview.ResumeLayout(False)
-        Me.ResumeLayout(False)
+        components = New ComponentModel.Container()
+        panPreview = New Panel()
+        rTxtMessage = New RichTextBox()
+        btnClose = New Button()
+        btnYes = New Button()
+        tip1 = New ToolTip(components)
+        panPreview.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' panPreview
+        ' 
+        panPreview.Controls.Add(rTxtMessage)
+        panPreview.Location = New Point(14, 14)
+        panPreview.Margin = New Padding(4, 3, 4, 3)
+        panPreview.Name = "panPreview"
+        panPreview.Size = New Size(856, 293)
+        panPreview.TabIndex = 0
+        ' 
+        ' rTxtMessage
+        ' 
+        rTxtMessage.BackColor = SystemColors.ControlLight
+        rTxtMessage.BorderStyle = BorderStyle.None
+        rTxtMessage.DetectUrls = False
+        rTxtMessage.Font = New Font("Consolas", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        rTxtMessage.Location = New Point(5, 3)
+        rTxtMessage.Margin = New Padding(4, 3, 4, 3)
+        rTxtMessage.Name = "rTxtMessage"
+        rTxtMessage.Size = New Size(848, 269)
+        rTxtMessage.TabIndex = 0
+        rTxtMessage.Text = ""
+        ' 
+        ' btnClose
+        ' 
+        btnClose.DialogResult = DialogResult.No
+        btnClose.Font = New Font("Segoe UI", 18F, FontStyle.Bold)
+        btnClose.Location = New Point(457, 328)
+        btnClose.Margin = New Padding(4, 3, 4, 3)
+        btnClose.Name = "btnClose"
+        btnClose.Size = New Size(168, 50)
+        btnClose.TabIndex = 2
+        btnClose.Text = "No"
+        btnClose.UseVisualStyleBackColor = True
+        ' 
+        ' btnYes
+        ' 
+        btnYes.DialogResult = DialogResult.Yes
+        btnYes.Font = New Font("Segoe UI", 18F, FontStyle.Bold)
+        btnYes.Location = New Point(127, 328)
+        btnYes.Margin = New Padding(4, 3, 4, 3)
+        btnYes.Name = "btnYes"
+        btnYes.Size = New Size(161, 50)
+        btnYes.TabIndex = 1
+        btnYes.Text = "Yes"
+        btnYes.UseVisualStyleBackColor = True
+        ' 
+        ' frmControllerDialog
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        AutoSize = True
+        ClientSize = New Size(937, 399)
+        ControlBox = False
+        Controls.Add(btnYes)
+        Controls.Add(btnClose)
+        Controls.Add(panPreview)
+        Margin = New Padding(4, 3, 4, 3)
+        Name = "frmControllerDialog"
+        Text = "Information"
+        panPreview.ResumeLayout(False)
+        ResumeLayout(False)
 
     End Sub
 

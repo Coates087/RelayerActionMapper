@@ -35,6 +35,13 @@ Partial Class frmMain
         btnSave = New Button()
         btnTest = New Button()
         chkOverride = New CheckBox()
+        gboxControllerMode = New GroupBox()
+        rbnPS = New RadioButton()
+        rbnXbox = New RadioButton()
+        btnPSGamePadFile = New Button()
+        TestPS = New Button()
+        TestXbox = New Button()
+        gboxControllerMode.SuspendLayout()
         SuspendLayout()
         ' 
         ' btnLoadFile
@@ -69,7 +76,7 @@ Partial Class frmMain
         ' 
         ' btnDefaultKBMFile
         ' 
-        btnDefaultKBMFile.Location = New Point(350, 222)
+        btnDefaultKBMFile.Location = New Point(350, 265)
         btnDefaultKBMFile.Margin = New Padding(4, 3, 4, 3)
         btnDefaultKBMFile.Name = "btnDefaultKBMFile"
         btnDefaultKBMFile.Size = New Size(244, 37)
@@ -162,12 +169,83 @@ Partial Class frmMain
         chkOverride.Text = "Always Override File"
         chkOverride.UseVisualStyleBackColor = True
         ' 
+        ' gboxControllerMode
+        ' 
+        gboxControllerMode.Controls.Add(rbnPS)
+        gboxControllerMode.Controls.Add(rbnXbox)
+        gboxControllerMode.Location = New Point(11, 5)
+        gboxControllerMode.Margin = New Padding(4, 3, 4, 3)
+        gboxControllerMode.Name = "gboxControllerMode"
+        gboxControllerMode.Padding = New Padding(4, 3, 4, 3)
+        gboxControllerMode.Size = New Size(368, 32)
+        gboxControllerMode.TabIndex = 14
+        gboxControllerMode.TabStop = False
+        gboxControllerMode.Text = "View Controls"
+        ' 
+        ' rbnPS
+        ' 
+        rbnPS.AutoSize = True
+        rbnPS.Location = New Point(127, 14)
+        rbnPS.Margin = New Padding(4, 3, 4, 3)
+        rbnPS.Name = "rbnPS"
+        rbnPS.Size = New Size(72, 19)
+        rbnPS.TabIndex = 13
+        rbnPS.Text = "PS Mode"
+        rbnPS.UseVisualStyleBackColor = True
+        ' 
+        ' rbnXbox
+        ' 
+        rbnXbox.AutoSize = True
+        rbnXbox.Checked = True
+        rbnXbox.Location = New Point(8, 14)
+        rbnXbox.Margin = New Padding(4, 3, 4, 3)
+        rbnXbox.Name = "rbnXbox"
+        rbnXbox.Size = New Size(86, 19)
+        rbnXbox.TabIndex = 12
+        rbnXbox.TabStop = True
+        rbnXbox.Text = "Xbox Mode"
+        rbnXbox.UseVisualStyleBackColor = True
+        ' 
+        ' btnPSGamePadFile
+        ' 
+        btnPSGamePadFile.Location = New Point(350, 222)
+        btnPSGamePadFile.Margin = New Padding(4, 3, 4, 3)
+        btnPSGamePadFile.Name = "btnPSGamePadFile"
+        btnPSGamePadFile.Size = New Size(244, 37)
+        btnPSGamePadFile.TabIndex = 15
+        btnPSGamePadFile.Text = "Create PlayStation Game Pad Config File"
+        btnPSGamePadFile.UseVisualStyleBackColor = True
+        ' 
+        ' TestPS
+        ' 
+        TestPS.Location = New Point(99, 241)
+        TestPS.Margin = New Padding(4, 3, 4, 3)
+        TestPS.Name = "TestPS"
+        TestPS.Size = New Size(162, 37)
+        TestPS.TabIndex = 16
+        TestPS.Text = "Test PlayStation Config"
+        TestPS.UseVisualStyleBackColor = True
+        ' 
+        ' TestXbox
+        ' 
+        TestXbox.Location = New Point(99, 198)
+        TestXbox.Margin = New Padding(4, 3, 4, 3)
+        TestXbox.Name = "TestXbox"
+        TestXbox.Size = New Size(162, 37)
+        TestXbox.TabIndex = 17
+        TestXbox.Text = "Test Xbox Config"
+        TestXbox.UseVisualStyleBackColor = True
+        ' 
         ' frmMain
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         AutoSize = True
         ClientSize = New Size(631, 434)
+        Controls.Add(TestXbox)
+        Controls.Add(TestPS)
+        Controls.Add(btnPSGamePadFile)
+        Controls.Add(gboxControllerMode)
         Controls.Add(chkOverride)
         Controls.Add(btnTest)
         Controls.Add(btnSave)
@@ -184,6 +262,8 @@ Partial Class frmMain
         Margin = New Padding(4, 3, 4, 3)
         Name = "frmMain"
         Text = "Relayer Action Mapper"
+        gboxControllerMode.ResumeLayout(False)
+        gboxControllerMode.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
 
@@ -201,4 +281,10 @@ Partial Class frmMain
     Friend WithEvents btnSave As Button
     Friend WithEvents btnTest As Button
     Friend WithEvents chkOverride As CheckBox
+    Friend WithEvents gboxControllerMode As GroupBox
+    Friend WithEvents rbnPS As RadioButton
+    Friend WithEvents rbnXbox As RadioButton
+    Friend WithEvents btnPSGamePadFile As Button
+    Friend WithEvents TestPS As Button
+    Friend WithEvents TestXbox As Button
 End Class

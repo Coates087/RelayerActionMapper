@@ -19,7 +19,7 @@ Public Class frmControllerDialog
 
     Private Sub frmPreviewConfigFile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         rTxtMessage.ReadOnly = True
-
+        'rTxtMessage.BackColor = Color.Blue
         rTxtMessage.Text = gamepadOnlyWarningText
     End Sub
 

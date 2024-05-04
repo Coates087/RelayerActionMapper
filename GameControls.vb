@@ -228,3 +228,8 @@ Public Class KeyboardClass
     Public Property KeyCode As String
     Public Property KeyName As String
 End Class
+
+Public Enum Platform
+    Xbox_btns
+    PS_btns
+End Enum
