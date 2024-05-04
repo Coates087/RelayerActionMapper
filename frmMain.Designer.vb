@@ -39,6 +39,8 @@ Partial Class frmMain
         rbnPS = New RadioButton()
         rbnXbox = New RadioButton()
         btnPSGamePadFile = New Button()
+        TestPS = New Button()
+        TestXbox = New Button()
         gboxControllerMode.SuspendLayout()
         SuspendLayout()
         ' 
@@ -214,12 +216,34 @@ Partial Class frmMain
         btnPSGamePadFile.Text = "Create PlayStation Game Pad Config File"
         btnPSGamePadFile.UseVisualStyleBackColor = True
         ' 
+        ' TestPS
+        ' 
+        TestPS.Location = New Point(99, 241)
+        TestPS.Margin = New Padding(4, 3, 4, 3)
+        TestPS.Name = "TestPS"
+        TestPS.Size = New Size(162, 37)
+        TestPS.TabIndex = 16
+        TestPS.Text = "Test PlayStation Config"
+        TestPS.UseVisualStyleBackColor = True
+        ' 
+        ' TestXbox
+        ' 
+        TestXbox.Location = New Point(99, 198)
+        TestXbox.Margin = New Padding(4, 3, 4, 3)
+        TestXbox.Name = "TestXbox"
+        TestXbox.Size = New Size(162, 37)
+        TestXbox.TabIndex = 17
+        TestXbox.Text = "Test Xbox Config"
+        TestXbox.UseVisualStyleBackColor = True
+        ' 
         ' frmMain
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         AutoSize = True
         ClientSize = New Size(631, 434)
+        Controls.Add(TestXbox)
+        Controls.Add(TestPS)
         Controls.Add(btnPSGamePadFile)
         Controls.Add(gboxControllerMode)
         Controls.Add(chkOverride)
@@ -261,4 +285,6 @@ Partial Class frmMain
     Friend WithEvents rbnPS As RadioButton
     Friend WithEvents rbnXbox As RadioButton
     Friend WithEvents btnPSGamePadFile As Button
+    Friend WithEvents TestPS As Button
+    Friend WithEvents TestXbox As Button
 End Class

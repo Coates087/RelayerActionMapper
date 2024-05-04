@@ -24,6 +24,10 @@ Public Class frmMain
         Dim thisAssembly As Assembly = Assembly.GetExecutingAssembly()
         Dim anAssemblyName = thisAssembly.GetName()
 
+        ' '' Uncomment for testing
+        'TestPS.Visible = False
+        'TestXbox.Visible = False
+
         assemblyName = "RelayerActionMapper" ''anAssemblyName.Name
         lblFile.Text = ""
         ClearSaveLabel()
@@ -83,6 +87,16 @@ Public Class frmMain
         CreateDefaultJsonFile(2)
     End Sub
 
+
+    Private Sub TestPS_Click(sender As Object, e As EventArgs) Handles TestPS.Click
+        LoadJsonIntoMemory(3)
+    End Sub
+
+
+    Private Sub TestXbox_Click(sender As Object, e As EventArgs) Handles TestXbox.Click
+        LoadJsonIntoMemory(1)
+    End Sub
+
     Private Sub btnLoadFile_Click(sender As Object, e As EventArgs) Handles btnLoadFile.Click
         'BeginInvoke(New InvokeDelegate(AddressOf DisableFileTextBox))
         'LoadFile()
@@ -104,10 +118,10 @@ Public Class frmMain
 
 
     Private Sub btnOpenControls_Click(sender As Object, e As EventArgs) Handles btnOpenControls.Click
-
+        Dim specialMessage As String = "No config file has been loaded. Do you wish to edit the controls from a pre-made configuration?"
         If IsNothing(gControls) Then
 
-            Dim msgResult = MessageBox.Show("No config file has been loaded. Do you wish to edit the controls from a pre-made configuration?", "Information", MessageBoxButtons.YesNo)
+            Dim msgResult = MessageBox.Show(specialMessage, "Information", MessageBoxButtons.YesNoCancel)
 
             If msgResult = DialogResult.Yes Then
                 Dim tempControls As GameControls = Nothing
@@ -117,6 +131,8 @@ Public Class frmMain
                 gControls = tempControls
                 gUnsavedChanges = True
                 PopulateSaveLabel()
+            ElseIf msgResult = DialogResult.Cancel Then
+                Exit Sub
             End If
         End If
 
@@ -214,6 +230,54 @@ Public Class frmMain
     Private Sub ClearSaveLabel()
         gUnsavedChanges = False
         lblUnSave.Text = ""
+    End Sub
+
+    Public Sub LoadJsonIntoMemory(intDefaultType As Integer)
+
+        Dim fullResourceName As String = ""
+        Dim strPlatform As String = "Xbox"
+        '' 1 = Xbox
+        '' 3 = PS
+
+        Select Case intDefaultType
+            Case 1
+                fullResourceName = assemblyName + "." + resKeyGamePadConfigDefault '' Xbox
+            Case 3
+                fullResourceName = assemblyName + "." + resKeyGamePadConfigDefault_PS '' PS
+                strPlatform = "PlayStation"
+            Case Else
+                fullResourceName = assemblyName + "." + resKeyGamePadConfigDefault
+        End Select
+
+
+        Dim strFileData As String = LoadResourceFile(fullResourceName)
+
+
+        Dim myControls As GameControls = Nothing
+
+        Dim validResult As String = ""
+
+        myControls = JsonSerializer.Deserialize(Of GameControls)(strFileData)
+
+        'validResult = ValidateJSON(myControls)
+
+        'If Not validResult = "" Then
+        '    MessageBox.Show("JSON file not formatted properly")
+        'End If
+
+
+        gControls = myControls
+
+        If intDefaultType = 1 Then
+            'gPlatform = Platform.Xbox_btns
+            rbnXbox.Checked = True
+        ElseIf intDefaultType = 3 Then
+            'gPlatform = Platform.PS_btns
+            rbnPS.Checked = True
+        End If
+
+
+        lblFile.Text = $"Loaded {strPlatform} Config into memory!!!"
     End Sub
 
     Public Sub CreateDefaultJsonFile(intDefaultType As Integer)
