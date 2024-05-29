@@ -23,6 +23,8 @@ Public Class frmAddUpdateControls
 
     Public gPlatform As Platform = Platform.Xbox_btns
 
+    Private buttonStringBytes As ButtonStrings = New ButtonStrings
+
     Public Class ImageName
         Public FileName As String = String.Empty
         Public ImageData As Bitmap = Nothing
@@ -119,155 +121,155 @@ Public Class frmAddUpdateControls
 #Region "Keyboard Mapping"
 
     Private Sub btnKeyStart_Click(sender As Object, e As EventArgs) Handles btnKeyStart.Click
-        Dim strFile As String = "Xbox_start_button.png"
+        Dim strFile As String = "Xbox_start_button"
 
         If gPlatform = Platform.PS_btns Then
-            strFile = "PS_Options.png"
+            strFile = "PS_Options"
         End If
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.Escape)
     End Sub
 
     Private Sub btnKeyBack_Click(sender As Object, e As EventArgs) Handles btnKeyBack.Click
-        Dim strFile As String = "Xbox_back_button.png"
+        Dim strFile As String = "Xbox_back_button"
         If gPlatform = Platform.PS_btns Then
-            strFile = "PS_Share.png"
+            strFile = "PS_Share"
         End If
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.V)
     End Sub
 
     Private Sub btnKeyA_Click(sender As Object, e As EventArgs) Handles btnKeyA.Click
-        Dim strFile As String = "Xbox_A_button.png"
+        Dim strFile As String = "Xbox_A_button"
         If gPlatform = Platform.PS_btns Then
-            strFile = "Cross.png"
+            strFile = "Cross"
         End If
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.Enter)
     End Sub
 
     Private Sub btnKeyB_Click(sender As Object, e As EventArgs) Handles btnKeyB.Click
-        Dim strFile As String = "Xbox_B_button.png"
+        Dim strFile As String = "Xbox_B_button"
         If gPlatform = Platform.PS_btns Then
-            strFile = "Circle.png"
+            strFile = "Circle"
         End If
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.Backspace)
     End Sub
 
     Private Sub btnKeyX_Click(sender As Object, e As EventArgs) Handles btnKeyX.Click
-        Dim strFile As String = "Xbox_X_button.png"
+        Dim strFile As String = "Xbox_X_button"
         If gPlatform = Platform.PS_btns Then
-            strFile = "Square.png"
+            strFile = "Square"
         End If
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.Tab)
     End Sub
 
     Private Sub btnKeyY_Click(sender As Object, e As EventArgs) Handles btnKeyY.Click
-        Dim strFile As String = "Xbox_Y_button.png"
+        Dim strFile As String = "Xbox_Y_button"
         If gPlatform = Platform.PS_btns Then
-            strFile = "Triangle.png"
+            strFile = "Triangle"
         End If
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.Shift)
     End Sub
 
     Private Sub btnKeyLB_Click(sender As Object, e As EventArgs) Handles btnKeyLB.Click
-        Dim strFile As String = "Icon_BtnXbox_LB.png"
+        Dim strFile As String = "Icon_BtnXbox_LB"
         If gPlatform = Platform.PS_btns Then
-            strFile = "PS_L1.png"
+            strFile = "PS_L1"
         End If
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.Q)
     End Sub
 
     Private Sub btnKeyRB_Click(sender As Object, e As EventArgs) Handles btnKeyRB.Click
-        Dim strFile As String = "Icon_BtnXbox_RB.png"
+        Dim strFile As String = "Icon_BtnXbox_RB"
         If gPlatform = Platform.PS_btns Then
-            strFile = "PS_R1.png"
+            strFile = "PS_R1"
         End If
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.R)
     End Sub
 
     Private Sub btnKeyLT_Click(sender As Object, e As EventArgs) Handles btnKeyLT.Click
-        Dim strFile As String = "Icon_BtnXbox_LT.png"
+        Dim strFile As String = "Icon_BtnXbox_LT"
         If gPlatform = Platform.PS_btns Then
-            strFile = "PS_L2.png"
+            strFile = "PS_L2"
         End If
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.WheelUp)
     End Sub
 
     Private Sub btnKeyRT_Click(sender As Object, e As EventArgs) Handles btnKeyRT.Click
-        Dim strFile As String = "Icon_BtnXbox_RT.png"
+        Dim strFile As String = "Icon_BtnXbox_RT"
         If gPlatform = Platform.PS_btns Then
-            strFile = "PS_R2.png"
+            strFile = "PS_R2"
         End If
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.WheelDown)
     End Sub
 
     Private Sub btnKey_dUp_Click(sender As Object, e As EventArgs) Handles btnKey_dUp.Click
-        Dim strFile As String = "Icon_BtnXbox_dpad_up.png"
+        Dim strFile As String = "Icon_BtnXbox_dpad_up"
         If gPlatform = Platform.PS_btns Then
-            strFile = "PS_dpad_up.png"
+            strFile = "PS_dpad_up"
         End If
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.W)
     End Sub
 
     Private Sub btnKey_dRight_Click(sender As Object, e As EventArgs) Handles btnKey_dRight.Click
-        Dim strFile As String = "Icon_BtnXbox_dpad_right.png"
+        Dim strFile As String = "Icon_BtnXbox_dpad_right"
         If gPlatform = Platform.PS_btns Then
-            strFile = "PS_dpad_right.png"
+            strFile = "PS_dpad_right"
         End If
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.D)
     End Sub
 
     Private Sub btnKey_dLeft_Click(sender As Object, e As EventArgs) Handles btnKey_dLeft.Click
-        Dim strFile As String = "Icon_BtnXbox_dpad_left.png"
+        Dim strFile As String = "Icon_BtnXbox_dpad_left"
         If gPlatform = Platform.PS_btns Then
-            strFile = "PS_dpad_left.png"
+            strFile = "PS_dpad_left"
         End If
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.A)
     End Sub
 
     Private Sub btnKey_dDown_Click(sender As Object, e As EventArgs) Handles btnKey_dDown.Click
-        Dim strFile As String = "Icon_BtnXbox_dpad_down.png"
+        Dim strFile As String = "Icon_BtnXbox_dpad_down"
         If gPlatform = Platform.PS_btns Then
-            strFile = "PS_dpad_down.png"
+            strFile = "PS_dpad_down"
         End If
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.S)
     End Sub
 
     Private Sub btnKeyLsMod_Click(sender As Object, e As EventArgs) Handles btnKeyLsMod.Click
-        Dim strFile As String = "Xbox_L_Sticks.png"
+        Dim strFile As String = "Xbox_L_Sticks"
         ShowKeyboardDialog(strFile, gControls.Ctrl)
     End Sub
 
     Private Sub btnKeyLsButton_Click(sender As Object, e As EventArgs) Handles btnKeyLsButton.Click
-        Dim strFile As String = "Xbox_L_StickClick.png"
+        Dim strFile As String = "Xbox_L_StickClick"
         If gPlatform = Platform.PS_btns Then
-            strFile = "PS_L3.png"
+            strFile = "PS_L3"
         End If
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.F)
     End Sub
 
     Private Sub btnKeyRsUp_Click(sender As Object, e As EventArgs) Handles btnKeyRsUp.Click
-        Dim strFile As String = "Xbox_R_Sticks_up.png"
+        Dim strFile As String = "Xbox_R_Sticks_up"
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.UpArrow)
     End Sub
 
     Private Sub btnKeyRsDown_Click(sender As Object, e As EventArgs) Handles btnKeyRsDown.Click
-        Dim strFile As String = "Xbox_R_Sticks_down.png"
+        Dim strFile As String = "Xbox_R_Sticks_down"
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.DownArrow)
     End Sub
 
     Private Sub btnKeyRsLeft_Click(sender As Object, e As EventArgs) Handles btnKeyRsLeft.Click
-        Dim strFile As String = "Xbox_R_Sticks_left.png"
+        Dim strFile As String = "Xbox_R_Sticks_left"
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.LeftArrow)
     End Sub
 
     Private Sub btnKeyRsRight_Click(sender As Object, e As EventArgs) Handles btnKeyRsRight.Click
-        Dim strFile As String = "Xbox_R_Sticks_right.png"
+        Dim strFile As String = "Xbox_R_Sticks_right"
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.RightArrow)
     End Sub
 
     Private Sub btnKeyRsButton_Click(sender As Object, e As EventArgs) Handles btnKeyRsButton.Click
-        Dim strFile As String = "Xbox_R_StickClick.png"
+        Dim strFile As String = "Xbox_R_StickClick"
         If gPlatform = Platform.PS_btns Then
-            strFile = "PS_R3.png"
+            strFile = "PS_R3"
         End If
         ShowKeyboardDialog(strFile, LoadToolTipText(strFile), gControls.R)
     End Sub
@@ -381,62 +383,62 @@ Public Class frmAddUpdateControls
     Public Sub LoadForm()
 
         Dim PS_List = New List(Of String) From {
-            "Circle.png",
-            "Cross.png",
-            "PS_L1.png",
-            "PS_L2.png",
-            "PS_L3.png",
-            "PS_Options.png",
-            "PS_R1.png",
-            "PS_R2.png",
-            "PS_R3.png",
-            "PS_Share.png",
-            "Square.png",
-            "Triangle.png",
-            "PS_dpad_down.png",
-            "PS_dpad_left.png",
-            "PS_dpad_right.png",
-            "PS_dpad_up.png",
-            "Xbox_R_Sticks_down.png",
-            "Xbox_R_Sticks_left.png",
-            "Xbox_R_Sticks_right.png",
-            "Xbox_R_Sticks_up.png",
-            "Xbox_L_Sticks.png",
-            "Xbox_L_Sticks_down.png",
-            "Xbox_L_Sticks_left.png",
-            "Xbox_L_Sticks_right.png",
-            "Xbox_L_Sticks_up.png"
+            "Circle",
+            "Cross",
+            "PS_L1",
+            "PS_L2",
+            "PS_L3",
+            "PS_Options",
+            "PS_R1",
+            "PS_R2",
+            "PS_R3",
+            "PS_Share",
+            "Square",
+            "Triangle",
+            "PS_dpad_down",
+            "PS_dpad_left",
+            "PS_dpad_right",
+            "PS_dpad_up",
+            "Xbox_R_Sticks_down",
+            "Xbox_R_Sticks_left",
+            "Xbox_R_Sticks_right",
+            "Xbox_R_Sticks_up",
+            "Xbox_L_Sticks",
+            "Xbox_L_Sticks_down",
+            "Xbox_L_Sticks_left",
+            "Xbox_L_Sticks_right",
+            "Xbox_L_Sticks_up"
         }
 
 
         Dim Xbox_List = New List(Of String) From {
-        "Icon_BtnXbox_dpad_down.png",
-        "Icon_BtnXbox_dpad_left.png",
-        "Icon_BtnXbox_dpad_right.png",
-        "Icon_BtnXbox_dpad_up.png",
-        "Icon_BtnXbox_LB.png",
-        "Icon_BtnXbox_LT.png",
-        "Icon_BtnXbox_RB.png",
-        "Icon_BtnXbox_RT.png",
-        "Xbox_A_button.png",
-        "Xbox_back_button.png",
-        "Xbox_B_button.png",
-        "Xbox_L_StickClick.png",
-        "Xbox_L_Sticks.png",
-        "Xbox_L_Sticks_down.png",
-        "Xbox_L_Sticks_left.png",
-        "Xbox_L_Sticks_right.png",
-        "Xbox_L_Sticks_up.png",
-        "Xbox_menu_button.png",
-        "Xbox_R_StickClick.png",
-        "Xbox_R_Sticks_down.png",
-        "Xbox_R_Sticks_left.png",
-        "Xbox_R_Sticks_right.png",
-        "Xbox_R_Sticks_up.png",
-        "Xbox_start_button.png",
-        "Xbox_view_button.png",
-        "Xbox_X_button.png",
-        "Xbox_Y_button.png"
+        "Icon_BtnXbox_dpad_down",
+        "Icon_BtnXbox_dpad_left",
+        "Icon_BtnXbox_dpad_right",
+        "Icon_BtnXbox_dpad_up",
+        "Icon_BtnXbox_LB",
+        "Icon_BtnXbox_LT",
+        "Icon_BtnXbox_RB",
+        "Icon_BtnXbox_RT",
+        "Xbox_A_button",
+        "Xbox_back_button",
+        "Xbox_B_button",
+        "Xbox_L_StickClick",
+        "Xbox_L_Sticks",
+        "Xbox_L_Sticks_down",
+        "Xbox_L_Sticks_left",
+        "Xbox_L_Sticks_right",
+        "Xbox_L_Sticks_up",
+        "Xbox_menu_button",
+        "Xbox_R_StickClick",
+        "Xbox_R_Sticks_down",
+        "Xbox_R_Sticks_left",
+        "Xbox_R_Sticks_right",
+        "Xbox_R_Sticks_up",
+        "Xbox_start_button",
+        "Xbox_view_button",
+        "Xbox_X_button",
+        "Xbox_Y_button"
         }
 
         If gPlatform = Platform.PS_btns Then
@@ -458,84 +460,84 @@ Public Class frmAddUpdateControls
 
         For Each imageStream As ImageName In imageStreamList
             If Not IsNothing(imageStream.ImageData) Then
-                If {"Xbox_start_button.png", "PS_Options.png"}.Contains(imageStream.FileName) Then
+                If {"Xbox_start_button", "PS_Options"}.Contains(imageStream.FileName) Then
                     picBoxStart.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxStart, imageStream.ToolTipText)
-                ElseIf {"Xbox_back_button.png", "PS_Share.png"}.Contains(imageStream.FileName) Then
+                ElseIf {"Xbox_back_button", "PS_Share"}.Contains(imageStream.FileName) Then
                     picBoxBack.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxBack, imageStream.ToolTipText)
-                ElseIf {"Xbox_A_button.png", "Cross.png"}.Contains(imageStream.FileName) Then
+                ElseIf {"Xbox_A_button", "Cross"}.Contains(imageStream.FileName) Then
                     picBoxA.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxA, imageStream.ToolTipText)
-                ElseIf {"Xbox_B_button.png", "Circle.png"}.Contains(imageStream.FileName) Then
+                ElseIf {"Xbox_B_button", "Circle"}.Contains(imageStream.FileName) Then
                     picBoxB.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxB, imageStream.ToolTipText)
-                ElseIf {"Xbox_X_button.png", "Square.png"}.Contains(imageStream.FileName) Then
+                ElseIf {"Xbox_X_button", "Square"}.Contains(imageStream.FileName) Then
                     picBoxX.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxX, imageStream.ToolTipText)
-                ElseIf {"Xbox_Y_button.png", "Triangle.png"}.Contains(imageStream.FileName) Then
+                ElseIf {"Xbox_Y_button", "Triangle"}.Contains(imageStream.FileName) Then
                     picBoxY.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxY, imageStream.ToolTipText)
-                ElseIf {"Icon_BtnXbox_LB.png", "PS_L1.png"}.Contains(imageStream.FileName) Then
+                ElseIf {"Icon_BtnXbox_LB", "PS_L1"}.Contains(imageStream.FileName) Then
                     picBoxLB.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxLB, imageStream.ToolTipText)
-                ElseIf {"Icon_BtnXbox_RB.png", "PS_R1.png"}.Contains(imageStream.FileName) Then
+                ElseIf {"Icon_BtnXbox_RB", "PS_R1"}.Contains(imageStream.FileName) Then
                     picBoxRB.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxRB, imageStream.ToolTipText)
-                ElseIf {"Icon_BtnXbox_LT.png", "PS_L2.png"}.Contains(imageStream.FileName) Then
+                ElseIf {"Icon_BtnXbox_LT", "PS_L2"}.Contains(imageStream.FileName) Then
                     picBoxLT.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxLT, imageStream.ToolTipText)
-                ElseIf {"Icon_BtnXbox_RT.png", "PS_R2.png"}.Contains(imageStream.FileName) Then
+                ElseIf {"Icon_BtnXbox_RT", "PS_R2"}.Contains(imageStream.FileName) Then
                     picBoxRT.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxRT, imageStream.ToolTipText)
                     ''dpad
-                ElseIf {"Icon_BtnXbox_dpad_up.png", "PS_dpad_up.png"}.Contains(imageStream.FileName) Then
+                ElseIf {"Icon_BtnXbox_dpad_up", "PS_dpad_up"}.Contains(imageStream.FileName) Then
                     picBox_dUp.Image = imageStream.ImageData
                     tip1.SetToolTip(picBox_dUp, imageStream.ToolTipText)
-                ElseIf {"Icon_BtnXbox_dpad_down.png", "PS_dpad_down.png"}.Contains(imageStream.FileName) Then
+                ElseIf {"Icon_BtnXbox_dpad_down", "PS_dpad_down"}.Contains(imageStream.FileName) Then
                     picBox_dDown.Image = imageStream.ImageData
                     tip1.SetToolTip(picBox_dDown, imageStream.ToolTipText)
-                ElseIf {"Icon_BtnXbox_dpad_left.png", "PS_dpad_left.png"}.Contains(imageStream.FileName) Then
+                ElseIf {"Icon_BtnXbox_dpad_left", "PS_dpad_left"}.Contains(imageStream.FileName) Then
                     picBox_dLeft.Image = imageStream.ImageData
                     tip1.SetToolTip(picBox_dLeft, imageStream.ToolTipText)
-                ElseIf {"Icon_BtnXbox_dpad_right.png", "PS_dpad_right.png"}.Contains(imageStream.FileName) Then
+                ElseIf {"Icon_BtnXbox_dpad_right", "PS_dpad_right"}.Contains(imageStream.FileName) Then
                     picBox_dRight.Image = imageStream.ImageData
                     tip1.SetToolTip(picBox_dRight, imageStream.ToolTipText)
 
                     ''left stick
-                ElseIf imageStream.FileName = "Xbox_L_Sticks.png" Then
+                ElseIf imageStream.FileName = "Xbox_L_Sticks" Then
                     picBoxLsMod.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxLsMod, imageStream.ToolTipText)
-                ElseIf imageStream.FileName = "Xbox_L_Sticks_up.png" Then
+                ElseIf imageStream.FileName = "Xbox_L_Sticks_up" Then
                     picBoxLsUp.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxLsUp, imageStream.ToolTipText)
-                ElseIf imageStream.FileName = "Xbox_L_Sticks_down.png" Then
+                ElseIf imageStream.FileName = "Xbox_L_Sticks_down" Then
                     picBoxLsDown.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxLsDown, imageStream.ToolTipText)
-                ElseIf imageStream.FileName = "Xbox_L_Sticks_left.png" Then
+                ElseIf imageStream.FileName = "Xbox_L_Sticks_left" Then
                     picBoxLsLeft.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxLsLeft, imageStream.ToolTipText)
-                ElseIf imageStream.FileName = "Xbox_L_Sticks_right.png" Then
+                ElseIf imageStream.FileName = "Xbox_L_Sticks_right" Then
                     picBoxLsRight.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxLsRight, imageStream.ToolTipText)
-                ElseIf {"Xbox_L_StickClick.png", "PS_L3.png"}.Contains(imageStream.FileName) Then
+                ElseIf {"Xbox_L_StickClick", "PS_L3"}.Contains(imageStream.FileName) Then
                     picBoxLsButton.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxLsButton, imageStream.ToolTipText)
 
                     ''right stick
-                ElseIf imageStream.FileName = "Xbox_R_Sticks_up.png" Then
+                ElseIf imageStream.FileName = "Xbox_R_Sticks_up" Then
                     picBoxRsUp.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxRsUp, imageStream.ToolTipText)
-                ElseIf imageStream.FileName = "Xbox_R_Sticks_down.png" Then
+                ElseIf imageStream.FileName = "Xbox_R_Sticks_down" Then
                     picBoxRsDown.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxRsDown, imageStream.ToolTipText)
-                ElseIf imageStream.FileName = "Xbox_R_Sticks_left.png" Then
+                ElseIf imageStream.FileName = "Xbox_R_Sticks_left" Then
                     picBoxRsLeft.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxRsLeft, imageStream.ToolTipText)
-                ElseIf imageStream.FileName = "Xbox_R_Sticks_right.png" Then
+                ElseIf imageStream.FileName = "Xbox_R_Sticks_right" Then
                     picBoxRsRight.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxRsRight, imageStream.ToolTipText)
-                ElseIf {"Xbox_R_StickClick.png", "PS_R3.png"}.Contains(imageStream.FileName) Then
+                ElseIf {"Xbox_R_StickClick", "PS_R3"}.Contains(imageStream.FileName) Then
                     picBoxRsButton.Image = imageStream.ImageData
                     tip1.SetToolTip(picBoxRsButton, imageStream.ToolTipText)
                 End If
@@ -638,18 +640,99 @@ Public Class frmAddUpdateControls
         End If
     End Sub
 
+    'Public Function LoadImage(strFile As String) As Bitmap
+    '    Dim image As Bitmap = Nothing
+    '    Dim byt As Byte() = Nothing
+    '    Dim fileString64 As String = ""
+    '    Dim fullResourceName As String = assemblyName + "." + strFile
+
+    '    Dim thisAssembly As Assembly = Assembly.GetExecutingAssembly()
+    '    Dim obj = thisAssembly.GetManifestResourceNames()
+    '    Dim readReflect = thisAssembly.GetManifestResourceStream(fullResourceName)
+
+    '    Dim ms As MemoryStream = New MemoryStream(byt)
+    '    If Not IsNothing(ms) Then
+
+    '        image = New Bitmap(ms)
+    '    End If
+    '    Return image
+    'End Function
+
+
     Public Function LoadImage(strFile As String) As Bitmap
         Dim image As Bitmap = Nothing
+        Dim byt As Byte() = Nothing
+        Dim fileString64 As String = ""
+        Dim tipMessage As String = ""
 
-        Dim fullResourceName As String = assemblyName + "." + strFile
 
-        Dim thisAssembly As Assembly = Assembly.GetExecutingAssembly()
-        Dim obj = thisAssembly.GetManifestResourceNames()
-        Dim readReflect = thisAssembly.GetManifestResourceStream(fullResourceName)
+        Select Case strFile
+            Case "Icon_BtnXbox_dpad_down", "PS_dpad_down"
+                fileString64 = buttonStringBytes.xbox_dpad_Down
+            Case "Icon_BtnXbox_dpad_left", "PS_dpad_left"
+                fileString64 = buttonStringBytes.xbox_dpad_Left
+            Case "Icon_BtnXbox_dpad_right", "PS_dpad_right"
+                fileString64 = buttonStringBytes.xbox_dpad_Right
+            Case "Icon_BtnXbox_dpad_up", "PS_dpad_up"
+                fileString64 = buttonStringBytes.xbox_dpad_Up
 
-        If Not IsNothing(readReflect) Then
+            Case "Icon_BtnXbox_LB", "PS_L1"
+                fileString64 = buttonStringBytes.xbox_LB
+            Case "Icon_BtnXbox_LT", "PS_L2"
+                fileString64 = buttonStringBytes.xbox_LT
+            Case "Icon_BtnXbox_RB", "PS_R1"
+                fileString64 = buttonStringBytes.xbox_RB
+            Case "Icon_BtnXbox_RT", "PS_R2"
+                fileString64 = buttonStringBytes.xbox_RT
 
-            image = New Bitmap(readReflect)
+            Case "Xbox_start_button", "Xbox_menu_button", "PS_Options"
+                fileString64 = buttonStringBytes.xbox_Start
+            Case "Xbox_back_button", "Xbox_view_button", "PS_Share"
+                fileString64 = buttonStringBytes.xbox_Back
+
+            Case "Xbox_A_button", "Cross"
+                fileString64 = buttonStringBytes.xbox_A
+            Case "Xbox_B_button", "Circle"
+                fileString64 = buttonStringBytes.xbox_B
+            Case "Xbox_X_button", "Square"
+                fileString64 = buttonStringBytes.xbox_X
+            Case "Xbox_Y_button", "Triangle"
+                fileString64 = buttonStringBytes.xbox_Y
+
+            Case "Xbox_R_Sticks_down"
+                fileString64 = buttonStringBytes.xbox_RStick_Down
+            Case "Xbox_R_Sticks_left"
+                fileString64 = buttonStringBytes.xbox_RStick_Left
+            Case "Xbox_R_Sticks_right"
+                fileString64 = buttonStringBytes.xbox_RStick_Right
+            Case "Xbox_R_Sticks_up"
+                fileString64 = buttonStringBytes.xbox_RStick_Up
+
+            Case "Xbox_R_StickClick", "PS_R3"
+                fileString64 = buttonStringBytes.xbox_RStickClick
+
+            Case "Xbox_L_Sticks"
+                fileString64 = buttonStringBytes.xbox_LStick
+            Case "Xbox_L_Sticks_down"
+                fileString64 = buttonStringBytes.xbox_LStick_Down
+            Case "Xbox_L_Sticks_left"
+                fileString64 = buttonStringBytes.xbox_LStick_Left
+            Case "Xbox_L_Sticks_right"
+                fileString64 = buttonStringBytes.xbox_LStick_Right
+            Case "Xbox_L_Sticks_up"
+                fileString64 = buttonStringBytes.xbox_LStick_Up
+
+            Case "Xbox_L_StickClick", "PS_L3"
+                fileString64 = buttonStringBytes.xbox_LStickClick
+            Case Else
+                Return image
+        End Select
+
+        byt = Convert.FromBase64String(fileString64)
+        Dim ms As MemoryStream = New MemoryStream(byt)
+        If Not IsNothing(ms) Then
+
+            image = New Bitmap(ms)
         End If
         Return image
     End Function
@@ -659,60 +742,60 @@ Public Class frmAddUpdateControls
 
 
         Select Case strFile
-            Case "Icon_BtnXbox_dpad_down.png", "PS_dpad_down.png"
+            Case "Icon_BtnXbox_dpad_down", "PS_dpad_down"
                 tipMessage = $"Move cursor down"
-            Case "Icon_BtnXbox_dpad_left.png", "PS_dpad_left.png"
+            Case "Icon_BtnXbox_dpad_left", "PS_dpad_left"
                 tipMessage = $"Move cursor left"
-            Case "Icon_BtnXbox_dpad_right.png", "PS_dpad_right.png"
+            Case "Icon_BtnXbox_dpad_right", "PS_dpad_right"
                 tipMessage = $"Move cursor right"
-            Case "Icon_BtnXbox_dpad_up.png", "PS_dpad_up.png"
+            Case "Icon_BtnXbox_dpad_up", "PS_dpad_up"
                 tipMessage = $"Move cursor up"
 
-            Case "Icon_BtnXbox_LB.png", "PS_L1.png"
+            Case "Icon_BtnXbox_LB", "PS_L1"
                 tipMessage = $"Switch page/unit left"
-            Case "Icon_BtnXbox_LT.png", "PS_L2.png"
+            Case "Icon_BtnXbox_LT", "PS_L2"
                 tipMessage = $"Zoom Out"
-            Case "Icon_BtnXbox_RB.png", "PS_R1.png"
+            Case "Icon_BtnXbox_RB", "PS_R1"
                 tipMessage = $"Switch page/unit left{vbCrLf}VN Event/Cutscene: Fast Forword"
-            Case "Icon_BtnXbox_RT.png", "PS_R2.png"
+            Case "Icon_BtnXbox_RT", "PS_R2"
                 tipMessage = $"Zoom In"
 
-            Case "Xbox_start_button.png", "Xbox_menu_button.png", "PS_Options.png"
+            Case "Xbox_start_button", "Xbox_menu_button", "PS_Options"
                 tipMessage = $"Options Menu: revert to default settings{vbCrLf}Battle Screen: Battle menu{vbCrLf}VN Event/Cutscene: Skip event"
-            Case "Xbox_back_button.png", "Xbox_view_button.png", "PS_Share.png"
+            Case "Xbox_back_button", "Xbox_view_button", "PS_Share"
                 tipMessage = $"Battle Screen: Display Stage information"
 
-            Case "Xbox_A_button.png", "Cross.png"
+            Case "Xbox_A_button", "Cross"
                 tipMessage = $"Confirm"
-            Case "Xbox_B_button.png", "Circle.png"
+            Case "Xbox_B_button", "Circle"
                 tipMessage = $"Cancel/Back"
-            Case "Xbox_X_button.png", "Square.png"
+            Case "Xbox_X_button", "Square"
                 tipMessage = $"Battle Screen:Display Detailed Info{vbCrLf}VN Event/Cutscene: Backlog{vbCrLf}Shop Screen: Overview{vbCrLf}Star Cube Screen: Overview"
-            Case "Xbox_Y_button.png", "Triangle.png"
+            Case "Xbox_Y_button", "Triangle"
                 tipMessage = $"Equipment Screen: Remove skill/equipment{vbCrLf}Battle Screen: Display threat area{vbCrLf}VN Event/Cutscene: Auto-Advance{vbCrLf}Shop Screen: Confirm Purchase"
 
-            Case "Xbox_R_Sticks_down.png"
+            Case "Xbox_R_Sticks_down"
                 tipMessage = $"Battle Screen: Move camera down{vbCrLf}Star Cube Screen: freely move cursor down"
-            Case "Xbox_R_Sticks_left.png"
+            Case "Xbox_R_Sticks_left"
                 tipMessage = $"Battle Screen: Move camera left{vbCrLf}Star Cube Screen: freely move cursor left"
-            Case "Xbox_R_Sticks_right.png"
+            Case "Xbox_R_Sticks_right"
                 tipMessage = $"Battle Screen: Move camera right{vbCrLf}Star Cube Screen: freely move cursor right"
-            Case "Xbox_R_Sticks_up.png"
+            Case "Xbox_R_Sticks_up"
                 tipMessage = $"Battle Screen: Move camera up{vbCrLf}Star Cube Screen: freely move cursor up"
 
-            Case "Xbox_R_StickClick.png", "PS_R3.png"
+            Case "Xbox_R_StickClick", "PS_R3"
                 tipMessage = $"Battle Screen: Toggle Auto Battle"
 
-            Case "Xbox_L_Sticks_down.png"
+            Case "Xbox_L_Sticks_down"
                 tipMessage = $"Move cursor down"
-            Case "Xbox_L_Sticks_left.png"
+            Case "Xbox_L_Sticks_left"
                 tipMessage = $"Move cursor left"
-            Case "Xbox_L_Sticks_right.png"
+            Case "Xbox_L_Sticks_right"
                 tipMessage = $"Move cursor right"
-            Case "Xbox_L_Sticks_up.png"
+            Case "Xbox_L_Sticks_up"
                 tipMessage = $"Move cursor up"
 
-            Case "Xbox_L_StickClick.png", "PS_L3.png"
+            Case "Xbox_L_StickClick", "PS_L3"
                 tipMessage = $"Battle Screen: View Aggro List"
         End Select
 
