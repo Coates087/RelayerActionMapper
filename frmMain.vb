@@ -22,12 +22,20 @@ Public Class frmMain
         Dim anAssemblyName = thisAssembly.GetName()
 
         ' ' Comment out for testing
-        'TestPS.Visible = False
-        'TestXbox.Visible = False
-
+        TestPS.Visible = False
+        TestXbox.Visible = False
+        'btnTest.Visible = True
         assemblyName = "RelayerActionMapper" ''anAssemblyName.Name
         lblFile.Text = ""
         ClearSaveLabel()
+        '//     "-ps",
+        '    //     // "-Load", "C:\\Users\\User\\Desktop\\Relayer Temp Folder\\KeyConfig45.json",
+        '    //     "-save", "C:\\Users\\User\\Desktop\\Relayer Temp Folder\"",
+        '    //     "-overridesave"
+
+        Dim arguments As String() = Environment.GetCommandLineArgs()
+
+        Console.WriteLine("GetCommandLineArgs: {0}", String.Join(", ", arguments))
     End Sub
 
 
