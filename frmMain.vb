@@ -28,14 +28,8 @@ Public Class frmMain
         assemblyName = "RelayerActionMapper" ''anAssemblyName.Name
         lblFile.Text = ""
         ClearSaveLabel()
-        '//     "-ps",
-        '    //     // "-Load", "C:\\Users\\User\\Desktop\\Relayer Temp Folder\\KeyConfig45.json",
-        '    //     "-save", "C:\\Users\\User\\Desktop\\Relayer Temp Folder\"",
-        '    //     "-overridesave"
 
-        Dim arguments As String() = Environment.GetCommandLineArgs()
-
-        Console.WriteLine("GetCommandLineArgs: {0}", String.Join(", ", arguments))
+        HandleArgs()
     End Sub
 
 
@@ -201,6 +195,18 @@ Public Class frmMain
         Else
             SaveFile()
         End If
+    End Sub
+
+    Private Sub HandleArgs()
+
+        '//     "-ps",
+        '    //     // "-Load", "C:\\Users\\User\\Desktop\\Relayer Temp Folder\\KeyConfig45.json",
+        '    //     "-save", "C:\\Users\\User\\Desktop\\Relayer Temp Folder\"",
+        '    //     "-overridesave"
+
+        Dim arguments As String() = Environment.GetCommandLineArgs()
+
+        Debug.WriteLine("GetCommandLineArgs: {0}", String.Join(", ", arguments))
     End Sub
 
     Public Function AddDescriptonsForControls(ByVal myControls As GameControlsPlus) As GameControlsPlus
@@ -412,6 +418,7 @@ Public Class frmMain
         Else
             Exit Sub
         End If
+
         Dim myOptions As New JsonSerializerOptions
         myOptions.WriteIndented = True
         myOptions.Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
