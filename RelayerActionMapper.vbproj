@@ -17,50 +17,6 @@
     <None Remove="ResourceObjects\KeyConfigDefaultController.json" />
     <None Remove="ResourceObjects\KeyConfigDefaultKeyboard.json" />
     <None Remove="ResourceObjects\KeyConfig_PS.json" />
-    <None Remove="ResourceObjects\PS_Buttons\Circle.png" />
-    <None Remove="ResourceObjects\PS_Buttons\Cross.png" />
-    <None Remove="ResourceObjects\PS_Buttons\PS_dpad_down.png" />
-    <None Remove="ResourceObjects\PS_Buttons\PS_dpad_left.png" />
-    <None Remove="ResourceObjects\PS_Buttons\PS_dpad_right.png" />
-    <None Remove="ResourceObjects\PS_Buttons\PS_dpad_up.png" />
-    <None Remove="ResourceObjects\PS_Buttons\PS_L1.png" />
-    <None Remove="ResourceObjects\PS_Buttons\PS_L2.png" />
-    <None Remove="ResourceObjects\PS_Buttons\PS_L3.png" />
-    <None Remove="ResourceObjects\PS_Buttons\PS_Options.png" />
-    <None Remove="ResourceObjects\PS_Buttons\PS_R1.png" />
-    <None Remove="ResourceObjects\PS_Buttons\PS_R2.png" />
-    <None Remove="ResourceObjects\PS_Buttons\PS_R3.png" />
-    <None Remove="ResourceObjects\PS_Buttons\PS_Share.png" />
-    <None Remove="ResourceObjects\PS_Buttons\Square.png" />
-    <None Remove="ResourceObjects\PS_Buttons\Triangle.png" />
-    <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_down.png" />
-    <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_left.png" />
-    <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_right.png" />
-    <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_up.png" />
-    <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_LB.png" />
-    <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_LT.png" />
-    <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_RB.png" />
-    <None Remove="ResourceObjects\XboxButtons\Icon_BtnXbox_RT.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_A_button.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_back_button.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_B_button.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_L_StickClick.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_L_Sticks.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_L_Sticks_down.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_L_Sticks_left.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_L_Sticks_right.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_L_Sticks_up.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_menu_button.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_R_StickClick.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_R_Sticks.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_R_Sticks_down.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_R_Sticks_left.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_R_Sticks_right.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_R_Sticks_up.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_start_button.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_view_button.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_X_button.png" />
-    <None Remove="ResourceObjects\XboxButtons\Xbox_Y_button.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -74,138 +30,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="ResourceObjects\KeyConfig_PS.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\PS_Buttons\Circle.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\PS_Buttons\Cross.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_dpad_down.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_dpad_left.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_dpad_right.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_dpad_up.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_L1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_L2.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_L3.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_Options.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_R1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_R2.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_R3.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\PS_Buttons\PS_Share.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\PS_Buttons\Square.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\PS_Buttons\Triangle.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_down.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_left.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_right.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_up.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Icon_BtnXbox_LB.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Icon_BtnXbox_LT.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Icon_BtnXbox_RB.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Icon_BtnXbox_RT.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_A_button.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_back_button.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_B_button.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_L_StickClick.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_L_Sticks.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_L_Sticks_down.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_L_Sticks_left.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_L_Sticks_right.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_L_Sticks_up.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_menu_button.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_R_StickClick.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_R_Sticks.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_R_Sticks_down.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_R_Sticks_left.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_R_Sticks_right.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_R_Sticks_up.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_start_button.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_view_button.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_X_button.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_Y_button.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -238,6 +62,138 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Update="ResourceObjects\PS_Buttons\Circle.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\PS_Buttons\Cross.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\PS_Buttons\PS_dpad_down.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\PS_Buttons\PS_dpad_left.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\PS_Buttons\PS_dpad_right.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\PS_Buttons\PS_dpad_up.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\PS_Buttons\PS_L1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\PS_Buttons\PS_L2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\PS_Buttons\PS_L3.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\PS_Buttons\PS_Options.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\PS_Buttons\PS_R1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\PS_Buttons\PS_R2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\PS_Buttons\PS_R3.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\PS_Buttons\PS_Share.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\PS_Buttons\Square.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\PS_Buttons\Triangle.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_down.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_left.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_right.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_up.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Icon_BtnXbox_LB.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Icon_BtnXbox_LT.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Icon_BtnXbox_RB.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Icon_BtnXbox_RT.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_A_button.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_back_button.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_B_button.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_L_StickClick.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_L_Sticks.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_L_Sticks_down.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_L_Sticks_left.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_L_Sticks_right.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_L_Sticks_up.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_menu_button.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_R_StickClick.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_R_Sticks.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_R_Sticks_down.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_R_Sticks_left.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_R_Sticks_right.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_R_Sticks_up.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_start_button.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_view_button.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_X_button.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ResourceObjects\XboxButtons\Xbox_Y_button.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

@@ -667,37 +667,65 @@ Public Class frmAddUpdateControls
 
 
         Select Case strFile
-            Case "Icon_BtnXbox_dpad_down", "PS_dpad_down"
+            Case "Icon_BtnXbox_dpad_down"
                 fileString64 = buttonStringBytes.xbox_dpad_Down
-            Case "Icon_BtnXbox_dpad_left", "PS_dpad_left"
+            Case "PS_dpad_down"
+                fileString64 = buttonStringBytes.ps_dpad_down
+            Case "Icon_BtnXbox_dpad_left"
                 fileString64 = buttonStringBytes.xbox_dpad_Left
-            Case "Icon_BtnXbox_dpad_right", "PS_dpad_right"
+            Case "PS_dpad_left"
+                fileString64 = buttonStringBytes.ps_dpad_left
+            Case "Icon_BtnXbox_dpad_right"
                 fileString64 = buttonStringBytes.xbox_dpad_Right
-            Case "Icon_BtnXbox_dpad_up", "PS_dpad_up"
+            Case "PS_dpad_right"
+                fileString64 = buttonStringBytes.ps_dpad_right
+            Case "Icon_BtnXbox_dpad_up"
                 fileString64 = buttonStringBytes.xbox_dpad_Up
+            Case "PS_dpad_up"
+                fileString64 = buttonStringBytes.ps_dpad_up
 
-            Case "Icon_BtnXbox_LB", "PS_L1"
+            Case "Icon_BtnXbox_LB"
                 fileString64 = buttonStringBytes.xbox_LB
-            Case "Icon_BtnXbox_LT", "PS_L2"
+            Case "PS_L1"
+                fileString64 = buttonStringBytes.ps_L1
+            Case "Icon_BtnXbox_LT"
                 fileString64 = buttonStringBytes.xbox_LT
-            Case "Icon_BtnXbox_RB", "PS_R1"
+            Case "PS_L2"
+                fileString64 = buttonStringBytes.ps_L2
+            Case "Icon_BtnXbox_RB"
                 fileString64 = buttonStringBytes.xbox_RB
-            Case "Icon_BtnXbox_RT", "PS_R2"
+            Case "PS_R1"
+                fileString64 = buttonStringBytes.ps_R1
+            Case "Icon_BtnXbox_RT"
                 fileString64 = buttonStringBytes.xbox_RT
+            Case "PS_R2"
+                fileString64 = buttonStringBytes.ps_R2
 
-            Case "Xbox_start_button", "Xbox_menu_button", "PS_Options"
+            Case "Xbox_start_button", "Xbox_menu_button"
                 fileString64 = buttonStringBytes.xbox_Start
-            Case "Xbox_back_button", "Xbox_view_button", "PS_Share"
+            Case "PS_Options"
+                fileString64 = buttonStringBytes.ps_options
+            Case "Xbox_back_button", "Xbox_view_button"
                 fileString64 = buttonStringBytes.xbox_Back
+            Case "PS_Share"
+                fileString64 = buttonStringBytes.ps_share
 
-            Case "Xbox_A_button", "Cross"
+            Case "Xbox_A_button"
                 fileString64 = buttonStringBytes.xbox_A
-            Case "Xbox_B_button", "Circle"
+            Case "Cross"
+                fileString64 = buttonStringBytes.ps_cross
+            Case "Xbox_B_button"
                 fileString64 = buttonStringBytes.xbox_B
-            Case "Xbox_X_button", "Square"
+            Case "Circle"
+                fileString64 = buttonStringBytes.ps_circle
+            Case "Xbox_X_button"
                 fileString64 = buttonStringBytes.xbox_X
-            Case "Xbox_Y_button", "Triangle"
+            Case "Square"
+                fileString64 = buttonStringBytes.ps_square
+            Case "Xbox_Y_button"
                 fileString64 = buttonStringBytes.xbox_Y
+            Case "Triangle"
+                fileString64 = buttonStringBytes.ps_triangle
 
             Case "Xbox_R_Sticks_down"
                 fileString64 = buttonStringBytes.xbox_RStick_Down
@@ -708,8 +736,10 @@ Public Class frmAddUpdateControls
             Case "Xbox_R_Sticks_up"
                 fileString64 = buttonStringBytes.xbox_RStick_Up
 
-            Case "Xbox_R_StickClick", "PS_R3"
+            Case "Xbox_R_StickClick"
                 fileString64 = buttonStringBytes.xbox_RStickClick
+            Case "PS_R3"
+                fileString64 = buttonStringBytes.ps_R3
 
             Case "Xbox_L_Sticks"
                 fileString64 = buttonStringBytes.xbox_LStick
@@ -722,8 +752,10 @@ Public Class frmAddUpdateControls
             Case "Xbox_L_Sticks_up"
                 fileString64 = buttonStringBytes.xbox_LStick_Up
 
-            Case "Xbox_L_StickClick", "PS_L3"
+            Case "Xbox_L_StickClick"
                 fileString64 = buttonStringBytes.xbox_LStickClick
+            Case "PS_L3"
+                fileString64 = buttonStringBytes.ps_L3
             Case Else
                 Return image
         End Select
