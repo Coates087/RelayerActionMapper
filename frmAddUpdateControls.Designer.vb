@@ -160,6 +160,7 @@ Partial Class frmAddUpdateControls
         rbnEditAll = New RadioButton()
         tip1 = New ToolTip(components)
         Label21 = New Label()
+        btnGamepadMode = New Button()
         gboxFields.SuspendLayout()
         CType(picBoxLsMod, ComponentModel.ISupportInitialize).BeginInit()
         CType(picBoxRsRight, ComponentModel.ISupportInitialize).BeginInit()
@@ -1820,6 +1821,19 @@ Partial Class frmAddUpdateControls
         Label21.TabIndex = 15
         Label21.Text = "Hover the mouse over a button icon to see the actions for it."
         ' 
+        ' btnGamepadMode
+        ' 
+        btnGamepadMode.BackColor = Color.LightSkyBlue
+        btnGamepadMode.Cursor = Cursors.Help
+        btnGamepadMode.Location = New Point(762, 46)
+        btnGamepadMode.Margin = New Padding(4, 3, 4, 3)
+        btnGamepadMode.Name = "btnGamepadMode"
+        btnGamepadMode.Size = New Size(210, 34)
+        btnGamepadMode.TabIndex = 142
+        btnGamepadMode.Tag = ""
+        btnGamepadMode.Text = "About Controller Only Mode"
+        btnGamepadMode.UseVisualStyleBackColor = False
+        ' 
         ' frmAddUpdateControls
         ' 
         AcceptButton = btnSave
@@ -1830,6 +1844,7 @@ Partial Class frmAddUpdateControls
         CancelButton = btnClose
         ClientSize = New Size(1049, 641)
         ControlBox = False
+        Controls.Add(btnGamepadMode)
         Controls.Add(Label21)
         Controls.Add(gboxEditMode)
         Controls.Add(gboxViewControls)
@@ -2013,4 +2028,5 @@ Partial Class frmAddUpdateControls
     Friend WithEvents btnKeyLsMod As Button
     Friend WithEvents Label20 As Label
     Friend WithEvents Label21 As Label
+    Friend WithEvents btnGamepadMode As Button
 End Class

@@ -28,6 +28,7 @@ Partial Class frmControllerDialog
         btnClose = New Button()
         btnYes = New Button()
         tip1 = New ToolTip(components)
+        btnOkay = New Button()
         panPreview.SuspendLayout()
         SuspendLayout()
         ' 
@@ -57,7 +58,7 @@ Partial Class frmControllerDialog
         ' 
         btnClose.DialogResult = DialogResult.No
         btnClose.Font = New Font("Segoe UI", 18F, FontStyle.Bold)
-        btnClose.Location = New Point(457, 328)
+        btnClose.Location = New Point(526, 328)
         btnClose.Margin = New Padding(4, 3, 4, 3)
         btnClose.Name = "btnClose"
         btnClose.Size = New Size(168, 50)
@@ -77,6 +78,18 @@ Partial Class frmControllerDialog
         btnYes.Text = "Yes"
         btnYes.UseVisualStyleBackColor = True
         ' 
+        ' btnOkay
+        ' 
+        btnOkay.DialogResult = DialogResult.OK
+        btnOkay.Font = New Font("Segoe UI", 18F, FontStyle.Bold)
+        btnOkay.Location = New Point(331, 328)
+        btnOkay.Margin = New Padding(4, 3, 4, 3)
+        btnOkay.Name = "btnOkay"
+        btnOkay.Size = New Size(161, 50)
+        btnOkay.TabIndex = 3
+        btnOkay.Text = "Okay"
+        btnOkay.UseVisualStyleBackColor = True
+        ' 
         ' frmControllerDialog
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -84,6 +97,7 @@ Partial Class frmControllerDialog
         AutoSize = True
         ClientSize = New Size(937, 399)
         ControlBox = False
+        Controls.Add(btnOkay)
         Controls.Add(btnYes)
         Controls.Add(btnClose)
         Controls.Add(panPreview)
@@ -100,4 +114,5 @@ Partial Class frmControllerDialog
     Friend WithEvents rTxtMessage As RichTextBox
     Friend WithEvents btnYes As Button
     Friend WithEvents tip1 As ToolTip
+    Friend WithEvents btnOkay As Button
 End Class

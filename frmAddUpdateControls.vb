@@ -36,6 +36,14 @@ Public Class frmAddUpdateControls
         Me.Close()
     End Sub
 
+    Private Sub btnGamepadMode_Click(sender As Object, e As EventArgs) Handles btnGamepadMode.Click
+
+
+        Dim myWarning As New frmControllerDialog
+
+        myWarning.ShowDialog()
+    End Sub
+
     Private Sub frmAddUpdateControls_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         btnClose.DialogResult = DialogResult.Cancel
@@ -61,24 +69,24 @@ Public Class frmAddUpdateControls
     Private Sub rbnController_CheckedChanged(sender As Object, e As EventArgs) Handles rbnController.CheckedChanged
 
         If rbnController.Checked Then
-            If gamepadOnlyFirstTime Then
+            'If gamepadOnlyFirstTime Then
 
-                Dim myWarning As New frmControllerDialog
+            '    Dim myWarning As New frmControllerDialog
 
-                Dim myResult = myWarning.ShowDialog()
+            '    Dim myResult = myWarning.ShowDialog()
 
-                If myResult = vbYes Then
-                    gamepadOnlyFirstTime = False
-                    ForceViewGamePadOnly()
-                    DisableViewControls()
-                Else
-                    rbnEditAll.Checked = True
-                    EnableViewControls()
-                End If
-            Else
-                ForceViewGamePadOnly()
-                DisableViewControls()
-            End If
+            '    If myResult = vbYes Then
+            '        gamepadOnlyFirstTime = False
+            '        ForceViewGamePadOnly()
+            '        DisableViewControls()
+            '    Else
+            '        rbnEditAll.Checked = True
+            '        EnableViewControls()
+            '    End If
+            'Else
+            ForceViewGamePadOnly()
+            DisableViewControls()
+            'End If
             gamepadOnly = True
         Else
             gamepadOnly = False
@@ -234,7 +242,7 @@ Public Class frmAddUpdateControls
     End Sub
 
     Private Sub btnKeyLsMod_Click(sender As Object, e As EventArgs) Handles btnKeyLsMod.Click
-        Dim strFile As String = "Xbox_L_Sticks"
+        Dim strFile = "Xbox_L_Sticks"
         ShowKeyboardDialog(strFile, gControls.Ctrl)
     End Sub
 
