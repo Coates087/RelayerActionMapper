@@ -1825,6 +1825,7 @@ Partial Class frmAddUpdateControls
         ' 
         btnGamepadMode.BackColor = Color.LightSkyBlue
         btnGamepadMode.Cursor = Cursors.Help
+        btnGamepadMode.FlatStyle = FlatStyle.Flat
         btnGamepadMode.Location = New Point(762, 46)
         btnGamepadMode.Margin = New Padding(4, 3, 4, 3)
         btnGamepadMode.Name = "btnGamepadMode"

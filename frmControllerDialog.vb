@@ -2,6 +2,8 @@
 
 Public Class frmControllerDialog
     Public IsQuestion As Boolean = False
+    Public UseCustomText As Boolean = False
+    Public CustomText As String = ""
     Public gControls As GameControls = Nothing
     Private Const nexusLink As String = "https://www.nexusmods.com/relayeradvanced/mods/1"
     Private Const gameBananaLink As String = "https://gamebanana.com/mods/490768"
@@ -28,9 +30,15 @@ Public Class frmControllerDialog
             btnClose.Visible = False
         End If
 
+        Dim finalText As String = gamepadOnlyWarningText + strQuestion
+
+        If UseCustomText = True Then
+            finalText = CustomText
+        End If
+
         rTxtMessage.ReadOnly = True
         'rTxtMessage.BackColor = Color.Blue
-        rTxtMessage.Text = gamepadOnlyWarningText + strQuestion
+        rTxtMessage.Text = finalText
     End Sub
 
     Private Sub btnYes_Click(sender As Object, e As EventArgs) Handles btnYes.Click

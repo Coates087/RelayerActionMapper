@@ -94,7 +94,6 @@ Partial Class frmControllerDialog
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        AutoSize = True
         ClientSize = New Size(937, 399)
         ControlBox = False
         Controls.Add(btnOkay)

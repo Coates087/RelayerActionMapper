@@ -41,6 +41,7 @@ Partial Class frmMain
         btnPSGamePadFile = New Button()
         TestPS = New Button()
         TestXbox = New Button()
+        btnHelp = New Button()
         gboxControllerMode.SuspendLayout()
         SuspendLayout()
         ' 
@@ -162,7 +163,7 @@ Partial Class frmMain
         ' chkOverride
         ' 
         chkOverride.AutoSize = True
-        chkOverride.Location = New Point(481, 12)
+        chkOverride.Location = New Point(385, 12)
         chkOverride.Name = "chkOverride"
         chkOverride.Size = New Size(132, 19)
         chkOverride.TabIndex = 13
@@ -236,12 +237,25 @@ Partial Class frmMain
         TestXbox.Text = "Test Xbox Config"
         TestXbox.UseVisualStyleBackColor = True
         ' 
+        ' btnHelp
+        ' 
+        btnHelp.BackColor = Color.LightSkyBlue
+        btnHelp.FlatStyle = FlatStyle.Flat
+        btnHelp.Location = New Point(543, 9)
+        btnHelp.Margin = New Padding(4, 3, 4, 3)
+        btnHelp.Name = "btnHelp"
+        btnHelp.Size = New Size(75, 28)
+        btnHelp.TabIndex = 18
+        btnHelp.Text = "Help"
+        btnHelp.UseVisualStyleBackColor = False
+        ' 
         ' frmMain
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         AutoSize = True
         ClientSize = New Size(631, 434)
+        Controls.Add(btnHelp)
         Controls.Add(TestXbox)
         Controls.Add(TestPS)
         Controls.Add(btnPSGamePadFile)
@@ -287,4 +301,5 @@ Partial Class frmMain
     Friend WithEvents btnPSGamePadFile As Button
     Friend WithEvents TestPS As Button
     Friend WithEvents TestXbox As Button
+    Friend WithEvents btnHelp As Button
 End Class
