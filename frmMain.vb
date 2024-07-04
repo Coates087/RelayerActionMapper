@@ -201,21 +201,13 @@ Public Class frmMain
 
     Private Sub HandleArgs()
 
-        '//     "-ps",
-        '    //     // "-Load", "C:\\Users\\User\\Desktop\\Relayer Temp Folder\\KeyConfig45.json",
-        '    //     "-save", "C:\\Users\\User\\Desktop\\Relayer Temp Folder\"",
-        '    //     "-overridesave"
-
         Dim arguments As List(Of String) = Environment.GetCommandLineArgs().ToList()
 
         Dim filteredArgs As New List(Of String)
         Dim finalArgs As New List(Of String)
 
         If arguments?.Count > 0 Then
-            For i As Integer = 1 To arguments.Count - 1
-                If i = arguments.Count - 1 AndAlso i = 1 Then
-                    Exit For
-                End If
+            For i As Integer = 1 To arguments.Count - 1 '' We want to skip the first "argument" since that refers to just the dll or exe of the program
                 filteredArgs.Add(arguments(i))
             Next
         End If
@@ -441,6 +433,11 @@ Public Class frmMain
                 'gPlatform = Platform.PS_btns
                 rbnPS.Checked = True
             End If
+
+            If String.IsNullOrWhiteSpace(gStrOpenFileName) Then
+                LoadFile(strSaveFilePath)
+            End If
+
             Dim msgResult = MessageBox.Show("Do you wish to open the directory for this file?", "Save Successful", MessageBoxButtons.YesNo)
 
             If msgResult = DialogResult.Yes Then
