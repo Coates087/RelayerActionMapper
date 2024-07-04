@@ -1,4 +1,4 @@
-#  Relayer Action Remapper V2
+#  Relayer Action Mapper V2
  
 Hello. Welcome to the Relayer Action Remapper tool. This utility tool is designed to make customizing the controls for Relayer Advanced on PC easier to do.
 
