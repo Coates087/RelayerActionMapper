@@ -22,7 +22,7 @@ Description: Sets the default directory for saving your config file. Like the ""
 Usage: Relayer Action Mapper.exe -save ""C:\My Folder\Keys\""
 
 **Additional Information**
-You can use none, one, or a combonation of these command line arguments together.
+You can use none, one, or a combination of these command line arguments together.
 Example: 
 Relayer Action Mapper.exe -ps -load ""C:\My Folder\KeyConfig.json"" -save ""C:\My Folder\Keys\"" -overridesave
 "
